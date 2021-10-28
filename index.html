@@ -46,7 +46,7 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
+          <!-- below is an example of doing the fancy mouseover thing -->
           <!-- <tr onmouseout="hypernerf_stop()" onmouseover="hypernerf_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
@@ -124,24 +124,26 @@ for Topologically Varying Neural Radiance Fields</papertitle>
             </td>
           </tr>
         </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
+        <table width="100%" align="center" border="0" cellpadding="0"><tbody>
           <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/segway_pic.jpeg" alt="segway" height="150">
+            <td style="padding:0px;width:40%;vertical-align:middle;text-align:center;">
+              <a href="images/segway_pic.jpeg"><img src="images/segway_pic.jpeg" alt="segway" height="210"></a>
             </td>
             <td width="75%" valign="center">
-              <a href="https://github.com/kerrj/segway">Miniature self-balancing robot</a>, built from scratch using off-the-shelf parts and able to drive around using model-predictive control.
+              <a href="https://github.com/kerrj/segway">Miniature self-balancing robot</a>, built from scratch using off-the-shelf parts and 
+              able to follow waypoints using model-predictive control for balance and 
+              <a href="https://www.ri.cmu.edu/pub_files/pub3/coulter_r_craig_1992_1/coulter_r_craig_1992_1.pdf">pure pursuit</a> for path following.
             </td>
           </tr>
           <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/mapper_pic.jpeg" alt="mapping robot" height="150">
-              <img src="images/map_pic.png" alt="map" height="150">
+            <td style="padding:20px;width:40%;vertical-align:middle;text-align: center;">
+              <a href="images/mapper_pic.jpeg"><img src="images/mapper_pic.jpeg" alt="mapping robot" height="182"></a>
+              <a href="images/map_pic.png"><img src="images/map_pic.png" alt="map" height="182"></a>
             </td>
             <td width="75%" valign="center">
-              <a href="https://github.com/kerrj/mapper">Indoor mapping robot</a> which autonomously mapped my house using a 
+              <a href="https://github.com/kerrj/mapper">Indoor mapping robot</a> built from scratch with a cheap planar lidar which autonomously mapped my house using a 
               <a href="https://research.google/pubs/pub45466/">Google Cartographer</a>-inspired SLAM algorithm, 
-                alongside a grid planner for exploration and <a href="https://en.wikipedia.org/wiki/Dynamic_window_approach">DWA</a> controller for path following.
+                alongside a grid path planner for exploration and <a href="https://en.wikipedia.org/wiki/Dynamic_window_approach">DWA</a> controller for path following. 
             </td>
           </tr>
         </tbody></table>
