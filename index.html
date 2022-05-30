@@ -20,7 +20,7 @@
               <p style="text-align:center">
                 <name>Justin Kerr</name>
               </p>
-              <p>I am a first year PhD student at UC Berkeley in the <a href="https://autolab.berkeley.edu/">AUTOLAB</a> working on surgical robotics, grasping, and deformable object manipulation.
+              <p>I am a first year PhD student at UC Berkeley in the <a href="https://autolab.berkeley.edu/">AUTOLAB</a> working on robot learning, usually for manipulation. Recently I'm interested in NeRFs for grasping, tactile sensing, surgery, and deformables. My work is supported by the NSF GRFP.
               </p>
               <p>
                 Previously I finished my bachelor's at CMU where I worked with Howie Choset on multi-agent path planning, and spent time at Berkshire Grey and NASA's JPL.
@@ -40,15 +40,151 @@
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Research</heading>
-              <p>(Under construction)</p>
-              <br>
-              <p>
-                I'm broadly interested in robotics: perception, motion planning, and deep learning, and currently am focusing on deformable object manipulation and surgical automation.
-              </p>
             </td>
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <!-- SGTM -->
+          <tr onmouseout="sgtm_stop()" onmouseover="sgtm_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='sgtm_splash'>
+                  <img src="images/sgtm_splash.png" width='180'/>
+                </div>
+                <img src='images/sgtm_under.png' width="180" id="sgtm_under">
+              </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function sgtm_start() {
+                  document.getElementById('sgtm_splash').style.opacity = "0";
+                  document.getElementById('sgtm_under').style.opacity = "1";
+                }
+
+                function sgtm_stop() {
+                  document.getElementById('sgtm_splash').style.opacity = "1";
+                  document.getElementById('sgtm_under').style.opacity = "0";
+                }
+                sgtm_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <!-- TITLE -->
+              <a href="https://sites.google.com/view/dex-nerf">
+                <papertitle>Autonomously Untangling Long Cables</papertitle>
+              </a>
+              <br>
+              <!-- AUTHORS -->
+              Vainavi Viswanath*, Kaushik Shivakumar*, Justin Kerr*, Brijen Thananjeyan, Ellen Novoseller, Jeffrey Ichnowski, Alejandro Escontrela, Michael Laskey, Joseph E. Gonzalez, Ken Goldberg
+              <br>
+              * Equal contribution
+              <br>
+              <!-- CONFERENCE -->
+              <em>RSS</em> 2022, Best Systems Paper Nominee
+              <!-- LINKS -->
+              <br>
+              <a href="https://sites.google.com/view/rss-2022-untangling/home">Website</a>
+              /
+              <a href="http://www.roboticsproceedings.org/rss18/p034.pdf">Paper</a>
+              <p></p>
+              <!-- SUMMARY -->
+              <p>A sliding-pinching dual-mode gripper enables untangling charging cables with manipulation primitives to simplify perception coupled with learned perception modules.</p>
+            </td>
+          </tr>
+          <!-- DEXNERF -->
+          <tr onmouseout="dexnerf_stop()" onmouseover="dexnerf_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='dexnerf_splash'>
+                  <img src="images/dexnerf_splash.png" width='180'/>
+                </div>
+                <img src='images/dexnerf_under.jpeg' width="180" id="dexnerf_under">
+              </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function dexnerf_start() {
+                  document.getElementById('dexnerf_splash').style.opacity = "0";
+                  document.getElementById('dexnerf_under').style.opacity = "1";
+                }
+
+                function dexnerf_stop() {
+                  document.getElementById('dexnerf_splash').style.opacity = "1";
+                  document.getElementById('dexnerf_under').style.opacity = "0";
+                }
+                dexnerf_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <!-- TITLE -->
+              <a href="https://sites.google.com/view/dex-nerf">
+                <papertitle>Dex-NeRF: Using a Neural Radiance Field to Grasp Transparent Objects</papertitle>
+              </a>
+              <br>
+              <!-- AUTHORS -->
+              Jeffrey Ichnowski*, Yahav Avigal*, Justin Kerr, Ken Goldberg
+              <br>
+              * Equal contribution
+              <br>
+              <!-- CONFERENCE -->
+              <em>CoRL</em> 2021
+              <!-- LINKS -->
+              <br>
+              <a href="https://sites.google.com/view/dex-nerf">Website</a>
+              /
+              <a href="https://arxiv.org/abs/2110.14217">arXiv</a>
+              <p></p>
+              <!-- SUMMARY -->
+              <p>Using NeRF as a scene understanding tool can produce graspable geometry even on reflective and transparent objects.</p>
+            </td>
+          </tr>
+          <!-- HOUSTON -->
+          <tr onmouseout="houston_stop()" onmouseover="houston_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='houston_splash'>
+                  <img src="images/houston_splash.png" width='180'/>
+                </div>
+                <img src='images/houston_flow.png' width="200" id="houston_flow">
+              </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function houston_start() {
+                  document.getElementById('houston_splash').style.opacity = "0";
+                  document.getElementById('houston_flow').style.opacity = "1";
+                }
+
+                function houston_stop() {
+                  document.getElementById('houston_splash').style.opacity = "1";
+                  document.getElementById('houston_flow').style.opacity = "0";
+                }
+                houston_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <!-- TITLE -->
+              <a href="https://sites.google.com/berkeley.edu/autolab-houston">
+                <papertitle>Learning to Localize, Grasp, and Hand Over Unmodified Surgical Needles</papertitle>
+              </a>
+              <br>
+              <!-- AUTHORS -->
+              Albert Wilcox*,  Justin Kerr*, Brijen Thananjeyan, Jeff Ichnowski, Minho Hwang, Samuel Paradis, Danyal Fer, Ken Goldberg
+              <br>
+              * Equal contribution
+              <br>
+              <!-- CONFERENCE -->
+              <em>ICRA</em> 2022 
+              <!-- LINKS -->
+              <br>
+              <a href="https://sites.google.com/berkeley.edu/autolab-houston">Website</a>
+              /
+              <a href="https://arxiv.org/abs/2112.04071">arXiv</a>
+              <p></p>
+              <!-- SUMMARY -->
+              <p>Combining active perception with behavior cloning can reliably hand a surgical needle back and forth between grippers.</p>
+            </td>
+          </tr>
           <!-- below is an example of doing the fancy mouseover thing -->
           <!-- <tr onmouseout="hypernerf_stop()" onmouseover="hypernerf_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -95,16 +231,16 @@ for Topologically Varying Neural Radiance Fields</papertitle>
             </td>
           </tr>  -->
 
-        </tbody></table>
+        <!-- </tbody></table> -->
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+        <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
               <heading>Service</heading>
             </td>
           </tr>
-        </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
+        </tbody></table> -->
+        <!-- <table width="100%" align="center" border="0" cellpadding="20"><tbody> -->
           <!-- <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <img src="images/cs188.jpg" alt="cs188">
@@ -119,7 +255,7 @@ for Topologically Varying Neural Radiance Fields</papertitle>
               <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd Edition</a>
             </td>
           </tr> -->
-        </tbody></table>
+        <!-- </tbody></table> -->
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
