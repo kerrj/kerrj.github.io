@@ -44,6 +44,60 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <!-- LUV -->
+          <tr onmouseout="luv_stop()" onmouseover="luv_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='luv_splash'>
+                  <video  width=115% height=100% muted autoplay loop>
+                    <source src="images/random_start.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+                <!-- <img src='images/luv_splash.png' width="180" id="luv_under"> -->
+                <video  width=115% height=100% muted autoplay loop id="luv_under">
+                  <source src="images/luv_smoothing.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function luv_start() {
+                  document.getElementById('luv_splash').style.opacity = "0";
+                  document.getElementById('luv_under').style.opacity = "1";
+                }
+
+                function luv_stop() {
+                  document.getElementById('luv_splash').style.opacity = "1";
+                  document.getElementById('luv_under').style.opacity = "0";
+                }
+                luv_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <!-- TITLE -->
+              <a href="https://sites.google.com/berkeley.edu/luv">
+                <papertitle>All You Need is LUV: Unsupervised Collection of Labeled Images using Invisible UV Fluorescent Indicators</papertitle>
+              </a>
+              <br>
+              <!-- AUTHORS -->
+              Brijen Thananjeyan*, Justin Kerr*, Huang Huang, Joseph E. Gonzalez, Ken Goldberg
+              <br>
+              * Equal contribution
+              <br>
+              <!-- CONFERENCE -->
+              Submitted to <em>IROS</em> 2022
+              <!-- LINKS -->
+              <br>
+              <a href="https://sites.google.com/berkeley.edu/luv">Website</a>
+              /
+              <a href="https://arxiv.org/abs/2203.04566">arXiv</a>
+              <p></p>
+              <!-- SUMMARY -->
+              <p>Fluorescent paint enables inexpensive (<$200) and self-supervised data collection of dense image annotations without altering objects' appearance. We demonstrate its broad applicability to several manipulation domains.</p>
+            </td>
+          </tr>
           <!-- SGTM -->
           <tr onmouseout="sgtm_stop()" onmouseover="sgtm_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -70,7 +124,7 @@
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <!-- TITLE -->
-              <a href="https://sites.google.com/view/dex-nerf">
+              <a href="https://sites.google.com/view/rss-2022-untangling/home">
                 <papertitle>Autonomously Untangling Long Cables</papertitle>
               </a>
               <br>
