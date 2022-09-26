@@ -20,7 +20,7 @@
               <p style="text-align:center">
                 <name>Justin Kerr</name>
               </p>
-              <p>I am a first year PhD student at UC Berkeley in the <a href="https://autolab.berkeley.edu/">AUTOLAB</a> working on robot learning, usually for manipulation. Recently I'm interested in NeRFs for grasping, tactile sensing, surgery, and deformables. My work is supported by the NSF GRFP.
+              <p>I am a second year PhD student at UC Berkeley in the <a href="https://autolab.berkeley.edu/">AUTOLab</a> working on robot learning for manipulation. Recently I'm interested in using NeRFs as a continual scene representation and investigating how large scale visuo-tactile datasets can yield useful representations for downstream robotic control. My work is supported by the NSF GRFP.
               </p>
               <p>
                 Previously I finished my bachelor's at CMU where I worked with Howie Choset on multi-agent path planning, and spent time at Berkshire Grey and NASA's JPL.
@@ -39,11 +39,107 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Research</heading>
+              <heading>Papers</heading>
             </td>
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <!-- TACVIS -->
+          <tr onmouseout="tacvis_stop()" onmouseover="tacvis_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='tacvis_under'>
+                  <img src="images/tacvis_under.png" width='180'/>
+                </div>
+                <img src="images/tacvis_splash.png" width='180' id='tacvis_splash'/>
+              </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function tacvis_start() {
+                  document.getElementById('tacvis_splash').style.opacity = "0";
+                  document.getElementById('tacvis_under').style.opacity = "1";
+                }
+
+                function tacvis_stop() {
+                  document.getElementById('tacvis_splash').style.opacity = "1";
+                  document.getElementById('tacvis_under').style.opacity = "0";
+                }
+                tacvis_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <!-- TITLE -->
+              <papertitle>Learning Self-Supervised Representations from Vision and Touch
+                  for Active Sliding Perception of Deformable Surfaces</papertitle>
+              <br>
+              <!-- AUTHORS -->
+              <b>Justin Kerr</b>*, Huang Huang*, Albert Wilcox, Ryan Hoque, Jeffrey Ichnowski, Roberto Calandra, and Ken Goldberg
+              <br>
+              *Equal contribution
+              <br>
+              <!-- CONFERENCE -->
+              Submitted to <em>ICRA</em> 2023
+              <!-- LINKS -->
+              <br>
+              arXiv Uploading...
+              <!-- <a href="https://sites.google.com/view/evo-nerf">Website</a>
+              /
+              <a href="https://openreview.net/forum?id=Bxr45keYrf">OpenReview</a> -->
+              <p></p>
+              <!-- SUMMARY -->
+              We collect spatially paired vision and tactile inputs with a custom rig to train cross-modal representations. We then show these representations can be used for multiple active and passive perception tasks without fine-tuning.
+            </td>
+          </tr>
+          <!-- EVO-NERF -->
+          <tr onmouseout="evonerf_stop()" onmouseover="evonerf_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='evonerf_under'>
+                  <img src="images/evonerf_early_stop.png" width='180'/>
+                </div>
+                <video  width=115% height=100% muted autoplay loop id="evonerf_splash">
+                  <source src="images/evonerf_splash.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function evonerf_start() {
+                  document.getElementById('evonerf_splash').style.opacity = "0";
+                  document.getElementById('evonerf_under').style.opacity = "1";
+                }
+
+                function evonerf_stop() {
+                  document.getElementById('evonerf_splash').style.opacity = "1";
+                  document.getElementById('evonerf_under').style.opacity = "0";
+                }
+                evonerf_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <!-- TITLE -->
+              <a href="https://sites.google.com/view/evo-nerf">
+                <papertitle>Evo-NeRF: Evolving NeRF for Sequential Robot Grasping</papertitle>
+              </a>
+              <br>
+              <!-- AUTHORS -->
+              <b>Justin Kerr</b>, Letian Fu, Huang Huang, Yahav Avigal, Matthew Tancik, Jeffrey Ichnowski, Angjoo Kanazawa, Ken Goldberg
+              <br>
+              <!-- CONFERENCE -->
+              <em>CoRL</em> 2022, <b>Oral Presentation</b>
+              <!-- LINKS -->
+              <br>
+              <a href="https://sites.google.com/view/evo-nerf">Website</a>
+              /
+              <a href="https://openreview.net/forum?id=Bxr45keYrf">OpenReview</a>
+              <p></p>
+              <!-- SUMMARY -->
+              NeRF functions as a real-time, updateable scene reconstruction for rapidly grasping table-top transparent objects.
+              Geometry regularization speeds and improves scene geometry, and a NeRF-adapted grasping network learns to ignore floaters.
+            </td>
+          </tr>
           <!-- LUV -->
           <tr onmouseout="luv_stop()" onmouseover="luv_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -51,7 +147,7 @@
               <div class="one">
                 <div class="two" id='luv_splash'>
                   <video  width=115% height=100% muted autoplay loop>
-                    <source src="images/random_start.mp4" type="video/mp4">
+                    <source src="images/luv_splash.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                     </video>
                 </div>
@@ -82,12 +178,12 @@
               </a>
               <br>
               <!-- AUTHORS -->
-              Brijen Thananjeyan*, Justin Kerr*, Huang Huang, Joseph E. Gonzalez, Ken Goldberg
+              Brijen Thananjeyan*, <b>Justin Kerr</b>*, Huang Huang, Joseph E. Gonzalez, Ken Goldberg
               <br>
               * Equal contribution
               <br>
               <!-- CONFERENCE -->
-              Submitted to <em>IROS</em> 2022
+              <em>IROS</em> 2022
               <!-- LINKS -->
               <br>
               <a href="https://sites.google.com/berkeley.edu/luv">Website</a>
@@ -95,7 +191,7 @@
               <a href="https://arxiv.org/abs/2203.04566">arXiv</a>
               <p></p>
               <!-- SUMMARY -->
-              <p>Fluorescent paint enables inexpensive (<$200) and self-supervised data collection of dense image annotations without altering objects' appearance. We demonstrate its broad applicability to several manipulation domains.</p>
+              <p>Fluorescent paint enables inexpensive (<$300) and self-supervised data collection of dense image annotations without altering objects' appearance. </p>
             </td>
           </tr>
           <!-- SGTM -->
@@ -129,12 +225,12 @@
               </a>
               <br>
               <!-- AUTHORS -->
-              Vainavi Viswanath*, Kaushik Shivakumar*, Justin Kerr*, Brijen Thananjeyan, Ellen Novoseller, Jeffrey Ichnowski, Alejandro Escontrela, Michael Laskey, Joseph E. Gonzalez, Ken Goldberg
+              Vainavi Viswanath*, Kaushik Shivakumar*, <b>Justin Kerr</b>*, Brijen Thananjeyan, Ellen Novoseller, Jeffrey Ichnowski, Alejandro Escontrela, Michael Laskey, Joseph E. Gonzalez, Ken Goldberg
               <br>
               * Equal contribution
               <br>
               <!-- CONFERENCE -->
-              <em>RSS</em> 2022, Best Systems Paper Nominee
+              <em>RSS</em> 2022, <b>Best Systems Paper Award</b>
               <!-- LINKS -->
               <br>
               <a href="https://sites.google.com/view/rss-2022-untangling/home">Website</a>
@@ -176,7 +272,7 @@
               </a>
               <br>
               <!-- AUTHORS -->
-              Jeffrey Ichnowski*, Yahav Avigal*, Justin Kerr, Ken Goldberg
+              Jeffrey Ichnowski*, Yahav Avigal*, <b>Justin Kerr</b>, Ken Goldberg
               <br>
               * Equal contribution
               <br>
@@ -189,7 +285,7 @@
               <a href="https://arxiv.org/abs/2110.14217">arXiv</a>
               <p></p>
               <!-- SUMMARY -->
-              <p>Using NeRF as a scene understanding tool can produce graspable geometry even on reflective and transparent objects.</p>
+              <p>Using NeRF to reconstruct scenes with offline calibrated camera poses can produce graspable geometry even on reflective and transparent objects.</p>
             </td>
           </tr>
           <!-- HOUSTON -->
@@ -223,7 +319,7 @@
               </a>
               <br>
               <!-- AUTHORS -->
-              Albert Wilcox*,  Justin Kerr*, Brijen Thananjeyan, Jeff Ichnowski, Minho Hwang, Samuel Paradis, Danyal Fer, Ken Goldberg
+              Albert Wilcox*,  <b>Justin Kerr</b>*, Brijen Thananjeyan, Jeff Ichnowski, Minho Hwang, Samuel Paradis, Danyal Fer, Ken Goldberg
               <br>
               * Equal contribution
               <br>
@@ -319,7 +415,7 @@ for Topologically Varying Neural Radiance Fields</papertitle>
         </tbody></table>
         <table width="100%" align="center" border="0" cellpadding="0"><tbody>
           <tr>
-            <td style="padding:0px;width:40%;vertical-align:middle;text-align:center;">
+            <td style="padding:0px;width:40%;vertical-align:middle;text-align:center" >
               <a href="images/segway_pic.jpeg"><img src="images/segway_pic.jpeg" alt="segway" height="210"></a>
             </td>
             <td width="75%" valign="center">
