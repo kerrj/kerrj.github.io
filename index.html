@@ -20,7 +20,8 @@
               <p style="text-align:center">
                 <name>Justin Kerr</name>
               </p>
-              <p>I am a second year PhD student at UC Berkeley in the <a href="https://autolab.berkeley.edu/">AUTOLab</a> working on robot learning for manipulation. Recently I'm interested in using NeRFs as a continual scene representation and investigating how large scale visuo-tactile datasets can yield useful representations for downstream robotic control. My work is supported by the NSF GRFP.
+              <p>I am a second year PhD student at UC Berkeley in the <a href="https://autolab.berkeley.edu/">AUTOLab</a> working on NeRF for robot manipulation and scene understanding, and visuo-tactile representation learning.
+                 Recently I'm interested in leveraging NeRF for language grounding, and how it could change how we interact with 3D. My work is supported by the NSF GRFP.
               </p>
               <p>
                 Previously I finished my bachelor's at CMU where I worked with Howie Choset on multi-agent path planning, and spent time at Berkshire Grey and NASA's JPL.
@@ -44,6 +45,52 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <!-- LERF -->
+          <tr onmouseout="lerf_stop()" onmouseover="lerf_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='lerf_under'>
+                  <img src="images/lerf_under.svg" width='180'/>
+                </div>
+                <video  width=115% height=100% muted autoplay loop id="lerf_splash">
+                  <source src="images/lerf_splash.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function lerf_start() {
+                  document.getElementById('lerf_splash').style.opacity = "0";
+                  document.getElementById('lerf_under').style.opacity = "1";
+                }
+
+                function lerf_stop() {
+                  document.getElementById('lerf_splash').style.opacity = "1";
+                  document.getElementById('lerf_under').style.opacity = "0";
+                }
+                lerf_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <!-- TITLE -->
+              <a href="https://lerf.io"><papertitle>LERF: Language Embedded Radiance Fields</papertitle></a>
+              <br>
+              <!-- AUTHORS -->
+              <b>Justin Kerr</b>*, Chung Min Kim*, Ken Goldberg, Angjoo Kanazawa, Matthew Tancik
+              <br>
+              *Equal contribution
+              <!-- <br> -->
+              <!-- CONFERENCE -->
+              <!-- Submitted to <em>ICRA</em> 2023 -->
+              <!-- LINKS -->
+              <br>
+              <a href="https://arxiv.org/abs/2303.09553">arXiv</a> / <a href="https://lerf.io">Website</a>
+              <p></p>
+              <!-- SUMMARY -->
+              Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D
+            </td>
+          </tr>
           <!-- TACVIS -->
           <tr onmouseout="tacvis_stop()" onmouseover="tacvis_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -70,16 +117,15 @@
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <!-- TITLE -->
-              <a href="https://arxiv.org/abs/2209.13042"><papertitle>Learning Self-Supervised Representations from Vision and Touch
-                  for Active Sliding Perception of Deformable Surfaces</papertitle></a>
+              <a href="https://arxiv.org/abs/2209.13042"><papertitle>Self-Supervised Visuo-Tactile Pretraining to Locate and Follow Garment Features</papertitle></a>
               <br>
               <!-- AUTHORS -->
               <b>Justin Kerr</b>*, Huang Huang*, Albert Wilcox, Ryan Hoque, Jeffrey Ichnowski, Roberto Calandra, and Ken Goldberg
               <br>
               *Equal contribution
-              <br>
+              <!-- <br> -->
               <!-- CONFERENCE -->
-              Submitted to <em>ICRA</em> 2023
+              <!-- Submitted to <em>ICRA</em> 2023 -->
               <!-- LINKS -->
               <br>
               <a href="https://arxiv.org/abs/2209.13042">arXiv</a>
