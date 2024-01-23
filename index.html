@@ -45,13 +45,109 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <!-- GARField -->
+          <tr onmouseout="garfield_stop()" onmouseover="garfield_start()">
+            <td style="padding:20px;width:30%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='garfield_under' >
+                  <img src="images/garfield_under.jpg" width=110%/>
+                </div>
+                <video  width=115% height=100% muted autoplay loop id="garfield_splash">
+                  <source src="images/garfield_splash.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function garfield_start() {
+                  document.getElementById('garfield_splash').style.opacity = "0";
+                  document.getElementById('garfield_under').style.opacity = "1";
+                }
+
+                function garfield_stop() {
+                  document.getElementById('garfield_splash').style.opacity = "1";
+                  document.getElementById('garfield_under').style.opacity = "0";
+                }
+                garfield_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:70%;vertical-align:middle">
+              <!-- TITLE -->
+              <a href="https://www.garfield.studio/"><papertitle>GARField: Group Anything with Radiance Fields
+              </papertitle></a>
+              <br>
+              <!-- AUTHORS -->
+              Chung Min Kim*, Mingxuan Wu*, Justin Kerr*, Ken Goldberg, Matthew Tancik, Angjoo Kanazawa
+              <br>
+              *Equal contribution
+              <br>
+              <!-- CONFERENCE -->
+              <em>arXiv</em> 2023 
+              <!-- LINKS -->
+              <br>
+              <a href="https://arxiv.org/abs/2401.09419">arXiv</a> / <a href="https://www.garfield.studio/">Website</a>
+              <p></p>
+              <!-- SUMMARY -->
+              Hierarchical grouping in 3D by training a scale-conditioned affinity field from multi-level masks
+            </td>
+          </tr>
+
+
+          <!-- Lerf-togo -->
+          <tr onmouseout="lerftogo_stop()" onmouseover="lerftogo_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='lerftogo_under'>
+                  <img src="images/lerftogo_under.jpg" width=100%/>
+                </div>
+                <video  width=115% height=100% muted autoplay loop id="lerftogo_splash">
+                  <source src="images/lerftogo_splash.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function lerftogo_start() {
+                  document.getElementById('lerftogo_splash').style.opacity = "0";
+                  document.getElementById('lerftogo_under').style.opacity = "1";
+                }
+
+                function lerftogo_stop() {
+                  document.getElementById('lerftogo_splash').style.opacity = "1";
+                  document.getElementById('lerftogo_under').style.opacity = "0";
+                }
+                lerftogo_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <!-- TITLE -->
+              <a href="https://lerftogo.github.io"><papertitle>LERF-TOGO: Language Embedded Radiance Fields for Zero-Shot Task-Oriented Grasping
+              </papertitle></a>
+              <br>
+              <!-- AUTHORS -->
+              Adam Rashid*, Satvik Sharma*, Chung Min Kim, <b>Justin Kerr</b>, Lawrence Yunliang Chen, Angjoo Kanazawa, Ken Goldberg
+              <br>
+              *Equal contribution
+              <br>
+              <!-- CONFERENCE -->
+              <em>CoRL</em> 2023 <b>Oral, Best Paper Finalist</b>
+              <!-- LINKS -->
+              <br>
+              <a href="https://arxiv.org/abs/2309.07970">arXiv</a> / <a href="https://lerftogo.github.io/">Website</a>
+              <p></p>
+              <!-- SUMMARY -->
+              LERF's multi-scale semantics enables 0-shot language-conditioned part grasping for a wide variety of objects.
+            </td>
+          </tr>
           <!-- LERF -->
           <tr onmouseout="lerf_stop()" onmouseover="lerf_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <!-- IMAGES -->
               <div class="one">
                 <div class="two" id='lerf_under'>
-                  <img src="images/lerf_under.svg" width='180'/>
+                  <img src="images/lerf_under.svg" width=100%/>
                 </div>
                 <video  width=115% height=100% muted autoplay loop id="lerf_splash">
                   <source src="images/lerf_splash.mp4" type="video/mp4">
@@ -82,7 +178,7 @@
               *Equal contribution
               <br>
               <!-- CONFERENCE -->
-              <em>ICCV</em> 2023
+              <em>ICCV</em> 2023 <b>Oral</b>
               <!-- LINKS -->
               <br>
               <a href="https://arxiv.org/abs/2303.09553">arXiv</a> / <a href="https://lerf.io">Website</a>
@@ -97,9 +193,9 @@
               <!-- IMAGES -->
               <div class="one">
                 <div class="two" id='tacvis_under'>
-                  <img src="images/tacvis_under.png" width='180'/>
+                  <img src="images/tacvis_under.png" width='100%'/>
                 </div>
-                <img src="images/tacvis_splash.png" width='180' id='tacvis_splash'/>
+                <img src="images/tacvis_splash.png" width='100%' id='tacvis_splash'/>
               </div>
               <!-- SCRIPT FOR HOVERING -->
               <script type="text/javascript">
@@ -140,7 +236,7 @@
               <!-- IMAGES -->
               <div class="one">
                 <div class="two" id='evonerf_under'>
-                  <img src="images/evonerf_early_stop.png" width='180'/>
+                  <img src="images/evonerf_early_stop.png" width='100%'/>
                 </div>
                 <video  width=115% height=100% muted autoplay loop id="evonerf_splash">
                   <source src="images/evonerf_splash.mp4" type="video/mp4">
@@ -243,9 +339,9 @@
               <!-- IMAGES -->
               <div class="one">
                 <div class="two" id='sgtm_splash'>
-                  <img src="images/sgtm_splash.png" width='180'/>
+                  <img src="images/sgtm_splash.png" width='100%'/>
                 </div>
-                <img src='images/sgtm_under.png' width="180" id="sgtm_under">
+                <img src='images/sgtm_under.png' width="100%" id="sgtm_under">
               </div>
               <!-- SCRIPT FOR HOVERING -->
               <script type="text/javascript">
@@ -290,9 +386,9 @@
               <!-- IMAGES -->
               <div class="one">
                 <div class="two" id='dexnerf_splash'>
-                  <img src="images/dexnerf_splash.png" width='180'/>
+                  <img src="images/dexnerf_splash.png" width='100%'/>
                 </div>
-                <img src='images/dexnerf_under.jpeg' width="180" id="dexnerf_under">
+                <img src='images/dexnerf_under.jpeg' width="100%" id="dexnerf_under">
               </div>
               <!-- SCRIPT FOR HOVERING -->
               <script type="text/javascript">
@@ -337,9 +433,9 @@
               <!-- IMAGES -->
               <div class="one">
                 <div class="two" id='houston_splash'>
-                  <img src="images/houston_splash.png" width='180'/>
+                  <img src="images/houston_splash.png" width='100%'/>
                 </div>
-                <img src='images/houston_flow.png' width="200" id="houston_flow">
+                <img src='images/houston_flow.png' width="100%" id="houston_flow">
               </div>
               <!-- SCRIPT FOR HOVERING -->
               <script type="text/javascript">
