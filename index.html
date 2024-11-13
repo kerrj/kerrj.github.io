@@ -57,6 +57,60 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <!-- Robot See Robot Do -->
+          <tr onmouseout="robotsee_stop()" onmouseover="robotsee_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='robotsee_under'>
+                  <video width=115% height=100% muted autoplay loop>
+                    <source src="images/robotsee_under.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <video width=115% height=100% muted autoplay loop id="robotsee_splash">
+                  <source src="images/robotsee_splash.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function robotsee_start() {
+                  document.getElementById('robotsee_splash').style.opacity = "0";
+                  document.getElementById('robotsee_under').style.opacity = "1";
+                }
+
+                function robotsee_stop() {
+                  document.getElementById('robotsee_splash').style.opacity = "1";
+                  document.getElementById('robotsee_under').style.opacity = "0";
+                }
+                robotsee_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <!-- TITLE -->
+              <a href="https://robot-see-robot-do.github.io/">
+                <papertitle>Robot See 👁️ Robot Do 🦾 Imitating Articulated Object Manipulation with Monocular 4D Reconstruction</papertitle>
+              </a>
+              <br>
+              <!-- AUTHORS -->
+              <b>Justin Kerr</b>*, Chung Min Kim*, Mingxuan Wu, Brent Yi, Qianqian Wang, Ken Goldberg, Angjoo Kanazawa
+              <br>
+              *Equal contribution
+              <br>
+              <!-- CONFERENCE -->
+              <em>CoRL</em> 2024 <b>Oral</b>
+              <!-- LINKS -->
+              <br>
+              <a href="https://arxiv.org/abs/2409.18121">arXiv</a>
+              /
+              <a href="https://robot-see-robot-do.github.io/">Website</a>
+              <p></p>
+              <!-- SUMMARY -->
+              Object-centric visual imitation from a single video by 4D-reconstructing articulated object motion and transfering to a bimanual robot
+            </td>
+          </tr>
+          
           <!-- GARField -->
           <tr onmouseout="garfield_stop()" onmouseover="garfield_start()">
             <td style="padding:20px;width:30%;vertical-align:middle">
