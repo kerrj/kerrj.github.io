@@ -57,6 +57,59 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <!-- EyeRobot -->
+          <tr onmouseout="eyerobot_stop()" onmouseover="eyerobot_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <!-- IMAGES -->
+              <div class="one">
+                <div class="two" id='eyerobot_under'>
+                  <video width=115% height=100% muted autoplay loop>
+                    <source src="images/eyerobot_under.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <video width=115% height=100% muted autoplay loop id="eyerobot_splash">
+                  <source src="images/eyerobot_splash.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <!-- SCRIPT FOR HOVERING -->
+              <script type="text/javascript">
+                function eyerobot_start() {
+                  document.getElementById('eyerobot_splash').style.opacity = "0";
+                  document.getElementById('eyerobot_under').style.opacity = "1";
+                }
+
+                function eyerobot_stop() {
+                  document.getElementById('eyerobot_splash').style.opacity = "1";
+                  document.getElementById('eyerobot_under').style.opacity = "0";
+                }
+                eyerobot_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <!-- TITLE -->
+              <a href="https://www.eyerobot.net">
+                <papertitle>Eye, Robot: Learning to Look to Act with a BC-RL Perception-Action Loop</papertitle>
+              </a>
+              <br>
+              <!-- AUTHORS -->
+              <b>Justin Kerr</b>, Kush Hari, Ethan Weber, Chung Min Kim, Brent Yi, Tyler Bonnen, Ken Goldberg, Angjoo Kanazawa
+              <br>
+              <!-- CONFERENCE -->
+              <em>arXiv</em> 2025
+              <!-- LINKS -->
+              <br>
+              <a href="https://www.eyerobot.net/data/EyeRobot-final.pdf">arXiv</a>
+              /
+              <a href="https://www.eyerobot.net">Website</a>
+              <p></p>
+              <!-- SUMMARY -->
+              We train a robot eyeball policy to look around to enable the performance of a BC arm agent.
+              Eye gaze emerges from RL by co-training with the BC agent and rewarding the eye for correct arm predictions.
+            </td>
+          </tr>
+          
           <!-- Robot See Robot Do -->
           <tr onmouseout="robotsee_stop()" onmouseover="robotsee_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -90,7 +143,7 @@
             <td style="padding:20px;width:75%;vertical-align:middle">
               <!-- TITLE -->
               <a href="https://robot-see-robot-do.github.io/">
-                <papertitle>Robot See 👁️ Robot Do 🦾: Imitating Articulated Object Manipulation with Monocular 4D Reconstruction</papertitle>
+                <papertitle>Robot See Robot Do: Imitating Articulated Object Manipulation with Monocular 4D Reconstruction</papertitle>
               </a>
               <br>
               <!-- AUTHORS -->
