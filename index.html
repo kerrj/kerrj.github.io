@@ -22,582 +22,573 @@
 </head>
 
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Justin Kerr</name>
-              </p>
-              <p>
-                I'm a 4th year PhD at Berkeley's AI Research Lab co-advised by Angjoo Kanazawa and Ken Goldberg. My work primarily involves 3D multi-modal reconstruction and how it can enable robotic manipulation.
-                 I'm also a maintainer of <a href="https://github.com/nerfstudio-project/nerfstudio">Nerfstudio</a>, a large open-source, open-license repo for 3D neural reconstruction. My work is supported by the NSF GRFP.
-              </p>
-              <p>
-                Previously I finished my bachelor's at CMU where I worked with Howie Choset on multi-robot path planning, and spent time at Berkshire Grey and NASA's JPL.
-              </p>
-              <p style="text-align:center">
-                <a href="mailto:justin_kerr@berkeley.edu">Email</a> &nbsp/&nbsp
-                <a href="https://twitter.com/justkerrding">Twitter</a> &nbsp/&nbsp
-                <a href="https://github.com/kerrj/">Github</a>
-              </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/justin_pic.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/justin_pic.jpg" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Papers</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <!-- EyeRobot -->
-          <tr onmouseout="eyerobot_stop()" onmouseover="eyerobot_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <!-- IMAGES -->
-              <div class="one">
-                <div class="two" id='eyerobot_under'>
-                  <video width=115% height=100% muted autoplay loop>
-                    <source src="images/eyerobot_under.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <video width=115% height=100% muted autoplay loop id="eyerobot_splash">
-                  <source src="images/eyerobot_splash.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function eyerobot_start() {
-                  document.getElementById('eyerobot_splash').style.opacity = "0";
-                  document.getElementById('eyerobot_under').style.opacity = "1";
-                }
+  <div class="container">
+    <div class="profile-section">
+      <div class="profile-text">
+        <p style="text-align:center">
+          <name>Justin Kerr</name>
+        </p>
+        <p>
+          I'm a 4th year PhD at Berkeley's AI Research Lab co-advised by Angjoo Kanazawa and Ken Goldberg. My work primarily involves 3D multi-modal reconstruction and how it can enable robotic manipulation.
+          Lately I've been interested in active vision; how can we get robots to look around like we do to accomplish tasks?
+           I'm also a maintainer of <a href="https://github.com/nerfstudio-project/nerfstudio">Nerfstudio</a>, a large open-source, open-license repo for 3D neural reconstruction. My work is supported by the NSF GRFP.
+        </p>
+        <p>
+          Previously I finished my bachelor's at CMU where I worked with Howie Choset on multi-robot path planning, and spent time at Berkshire Grey and NASA's JPL.
+        </p>
+        <p style="text-align:center">
+          <a href="mailto:justin_kerr@berkeley.edu">Email</a> &nbsp/&nbsp
+          <a href="https://twitter.com/justkerrding">Twitter</a> &nbsp/&nbsp
+          <a href="https://github.com/kerrj/">Github</a>
+        </p>
+      </div>
+      <div class="profile-image">
+        <a href="images/justin_pic.jpg"><img alt="profile photo" src="images/justin_pic.jpg" class="hoverZoomLink"></a>
+      </div>
+    </div>
+    <div class="papers-section">
+      <heading>Papers</heading>
+      <!-- EyeRobot -->
+      <div class="paper-item" onmouseout="eyerobot_stop()" onmouseover="eyerobot_start()">
+        <div class="paper-image">
+          <!-- IMAGES -->
+          <div class="one">
+            <div class="two" id='eyerobot_under'>
+              <video  muted autoplay loop>
+                <source src="images/eyerobot_under_600p.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <video  muted autoplay loop id="eyerobot_splash">
+              <source src="images/eyerobot_splash.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <!-- SCRIPT FOR HOVERING -->
+          <script type="text/javascript">
+            function eyerobot_start() {
+              document.getElementById('eyerobot_splash').style.opacity = "0";
+              document.getElementById('eyerobot_under').style.opacity = "1";
+            }
 
-                function eyerobot_stop() {
-                  document.getElementById('eyerobot_splash').style.opacity = "1";
-                  document.getElementById('eyerobot_under').style.opacity = "0";
-                }
-                eyerobot_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://www.eyerobot.net">
-                <papertitle>Eye, Robot: Learning to Look to Act with a BC-RL Perception-Action Loop</papertitle>
-              </a>
-              <br>
-              <!-- AUTHORS -->
-              <b>Justin Kerr</b>, Kush Hari, Ethan Weber, Chung Min Kim, Brent Yi, Tyler Bonnen, Ken Goldberg, Angjoo Kanazawa
-              <br>
-              <!-- CONFERENCE -->
-              <em>arXiv</em> 2025
-              <!-- LINKS -->
-              <br>
-              <a href="https://www.eyerobot.net/data/EyeRobot-final.pdf">arXiv</a>
-              /
-              <a href="https://www.eyerobot.net">Website</a>
-              <p></p>
-              <!-- SUMMARY -->
-              We train a robot eyeball policy to look around to enable the performance of a BC arm agent.
-              Eye gaze emerges from RL by co-training with the BC agent and rewarding the eye for correct arm predictions.
-            </td>
-          </tr>
+            function eyerobot_stop() {
+              document.getElementById('eyerobot_splash').style.opacity = "1";
+              document.getElementById('eyerobot_under').style.opacity = "0";
+            }
+            eyerobot_stop()
+          </script>
+        </div>
+        <div class="paper-content">
+          <!-- TITLE -->
+          <a href="https://www.eyerobot.net">
+            <papertitle>Eye, Robot: Learning to Look to Act with a BC-RL Perception-Action Loop</papertitle>
+          </a>
+          <br>
+          <!-- AUTHORS -->
+          <b>Justin Kerr</b>, Kush Hari, Ethan Weber, Chung Min Kim, Brent Yi, Tyler Bonnen, Ken Goldberg, Angjoo Kanazawa
+          <br>
+          <!-- CONFERENCE -->
+          <em>arXiv</em> 2025
+          <!-- LINKS -->
+          <br>
+          <a href="https://www.eyerobot.net/data/EyeRobot-final.pdf">arXiv</a>
+          /
+          <a href="https://www.eyerobot.net">Website</a>
+          <p></p>
+          <!-- SUMMARY -->
+          We train a robot eyeball policy to look around to enable the performance of a BC arm agent.
+          Eye gaze emerges from RL by co-training with the BC agent and rewarding the eye for correct arm predictions.
+        </div>
+      </div>
           
-          <!-- Robot See Robot Do -->
-          <tr onmouseout="robotsee_stop()" onmouseover="robotsee_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <!-- IMAGES -->
-              <div class="one">
-                <div class="two" id='robotsee_under'>
-                  <video width=115% height=100% muted autoplay loop>
-                    <source src="images/robotsee_under.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
-                <video width=115% height=100% muted autoplay loop id="robotsee_splash">
-                  <source src="images/robotsee_splash.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function robotsee_start() {
-                  document.getElementById('robotsee_splash').style.opacity = "0";
-                  document.getElementById('robotsee_under').style.opacity = "1";
-                }
+      <!-- Robot See Robot Do -->
+      <div class="paper-item" onmouseout="robotsee_stop()" onmouseover="robotsee_start()">
+        <div class="paper-image">
+          <!-- IMAGES -->
+          <div class="one">
+            <div class="two" id='robotsee_under'>
+              <video  muted autoplay loop>
+                <source src="images/robotsee_under.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <video  muted autoplay loop id="robotsee_splash">
+              <source src="images/robotsee_splash_720p.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <!-- SCRIPT FOR HOVERING -->
+          <script type="text/javascript">
+            function robotsee_start() {
+              document.getElementById('robotsee_splash').style.opacity = "0";
+              document.getElementById('robotsee_under').style.opacity = "1";
+            }
 
-                function robotsee_stop() {
-                  document.getElementById('robotsee_splash').style.opacity = "1";
-                  document.getElementById('robotsee_under').style.opacity = "0";
-                }
-                robotsee_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://robot-see-robot-do.github.io/">
-                <papertitle>Robot See Robot Do: Imitating Articulated Object Manipulation with Monocular 4D Reconstruction</papertitle>
-              </a>
-              <br>
-              <!-- AUTHORS -->
-              <b>Justin Kerr</b>*, Chung Min Kim*, Mingxuan Wu, Brent Yi, Qianqian Wang, Ken Goldberg, Angjoo Kanazawa
-              <br>
-              *Equal contribution
-              <br>
-              <!-- CONFERENCE -->
-              <em>CoRL</em> 2024 <b>Oral</b>
-              <!-- LINKS -->
-              <br>
-              <a href="https://arxiv.org/abs/2409.18121">arXiv</a>
-              /
-              <a href="https://robot-see-robot-do.github.io/">Website</a>
-              <p></p>
-              <!-- SUMMARY -->
-              Object-centric visual imitation from a single video by 4D-reconstructing articulated object motion and transfering to a bimanual robot
-            </td>
-          </tr>
+            function robotsee_stop() {
+              document.getElementById('robotsee_splash').style.opacity = "1";
+              document.getElementById('robotsee_under').style.opacity = "0";
+            }
+            robotsee_stop()
+          </script>
+        </div>
+        <div class="paper-content">
+          <!-- TITLE -->
+          <a href="https://robot-see-robot-do.github.io/">
+            <papertitle>Robot See Robot Do: Imitating Articulated Object Manipulation with Monocular 4D Reconstruction</papertitle>
+          </a>
+          <br>
+          <!-- AUTHORS -->
+          <b>Justin Kerr</b>*, Chung Min Kim*, Mingxuan Wu, Brent Yi, Qianqian Wang, Ken Goldberg, Angjoo Kanazawa
+          <br>
+          *Equal contribution
+          <br>
+          <!-- CONFERENCE -->
+          <em>CoRL</em> 2024 <b>Oral</b>
+          <!-- LINKS -->
+          <br>
+          <a href="https://arxiv.org/abs/2409.18121">arXiv</a>
+          /
+          <a href="https://robot-see-robot-do.github.io/">Website</a>
+          <p></p>
+          <!-- SUMMARY -->
+          Object-centric visual imitation from a single video by 4D-reconstructing articulated object motion and transfering to a bimanual robot
+        </div>
+      </div>
           
-          <!-- GARField -->
-          <tr onmouseout="garfield_stop()" onmouseover="garfield_start()">
-            <td style="padding:20px;width:30%;vertical-align:middle">
-              <!-- IMAGES -->
-              <div class="one">
-                <div class="two" id='garfield_under' >
-                  <img src="images/garfield_under.jpg" width=110%/>
-                </div>
-                <video  width=115% height=100% muted autoplay loop id="garfield_splash">
-                  <source src="images/garfield_splash.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
+      <!-- GARField -->
+      <div class="paper-item" onmouseout="garfield_stop()" onmouseover="garfield_start()">
+        <div class="paper-image">
+          <!-- IMAGES -->
+          <div class="one">
+            <div class="two" id='garfield_under' >
+              <img src="images/garfield_under.jpg"/>
+            </div>
+            <video  muted autoplay loop id="garfield_splash">
+              <source src="images/garfield_splash_720p.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <!-- SCRIPT FOR HOVERING -->
+          <script type="text/javascript">
+            function garfield_start() {
+              document.getElementById('garfield_splash').style.opacity = "0";
+              document.getElementById('garfield_under').style.opacity = "1";
+            }
+
+            function garfield_stop() {
+              document.getElementById('garfield_splash').style.opacity = "1";
+              document.getElementById('garfield_under').style.opacity = "0";
+            }
+            garfield_stop()
+          </script>
+        </div>
+        <div class="paper-content">
+          <!-- TITLE -->
+          <a href="https://www.garfield.studio/"><papertitle>GARField: Group Anything with Radiance Fields
+          </papertitle></a>
+          <br>
+          <!-- AUTHORS -->
+          Chung Min Kim*, Mingxuan Wu*, <b>Justin Kerr</b>*, Ken Goldberg, Matthew Tancik, Angjoo Kanazawa
+          <br>
+          *Equal contribution
+          <br>
+          <!-- CONFERENCE -->
+          <em>CVPR</em> 2024
+          <!-- LINKS -->
+          <br>
+          <a href="https://arxiv.org/abs/2401.09419">arXiv</a> / <a href="https://www.garfield.studio/">Website</a>
+          <p></p>
+          <!-- SUMMARY -->
+          Hierarchical grouping in 3D by training a scale-conditioned affinity field from multi-level masks
+        </div>
+      </div>
+
+
+      <!-- Lerf-togo -->
+      <div class="paper-item" onmouseout="lerftogo_stop()" onmouseover="lerftogo_start()">
+        <div class="paper-image">
+          <!-- IMAGES -->
+          <div class="one">
+            <div class="two" id='lerftogo_under'>
+              <img src="images/lerftogo_under.jpg"/>
+            </div>
+            <video  muted autoplay loop id="lerftogo_splash">
+              <source src="images/lerftogo_splash.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <!-- SCRIPT FOR HOVERING -->
+          <script type="text/javascript">
+            function lerftogo_start() {
+              document.getElementById('lerftogo_splash').style.opacity = "0";
+              document.getElementById('lerftogo_under').style.opacity = "1";
+            }
+
+            function lerftogo_stop() {
+              document.getElementById('lerftogo_splash').style.opacity = "1";
+              document.getElementById('lerftogo_under').style.opacity = "0";
+            }
+            lerftogo_stop()
+          </script>
+        </div>
+        <div class="paper-content">
+          <!-- TITLE -->
+          <a href="https://lerftogo.github.io"><papertitle>LERF-TOGO: Language Embedded Radiance Fields for Zero-Shot Task-Oriented Grasping
+          </papertitle></a>
+          <br>
+          <!-- AUTHORS -->
+          Adam Rashid*, Satvik Sharma*, Chung Min Kim, <b>Justin Kerr</b>, Lawrence Yunliang Chen, Angjoo Kanazawa, Ken Goldberg
+          <br>
+          *Equal contribution
+          <br>
+          <!-- CONFERENCE -->
+          <em>CoRL</em> 2023 <b>Oral, Best Paper Finalist</b>
+          <!-- LINKS -->
+          <br>
+          <a href="https://arxiv.org/abs/2309.07970">arXiv</a> / <a href="https://lerftogo.github.io/">Website</a>
+          <p></p>
+          <!-- SUMMARY -->
+          LERF's multi-scale semantics enables 0-shot language-conditioned part grasping for a wide variety of objects.
+        </div>
+      </div>
+      <!-- LERF -->
+      <div class="paper-item" onmouseout="lerf_stop()" onmouseover="lerf_start()">
+        <div class="paper-image">
+          <!-- IMAGES -->
+          <div class="one">
+            <div class="two" id='lerf_under'>
+              <img src="images/lerf_under.svg"/>
+            </div>
+            <video  muted autoplay loop id="lerf_splash">
+              <source src="images/lerf_splash.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <!-- SCRIPT FOR HOVERING -->
+          <script type="text/javascript">
+            function lerf_start() {
+              document.getElementById('lerf_splash').style.opacity = "0";
+              document.getElementById('lerf_under').style.opacity = "1";
+            }
+
+            function lerf_stop() {
+              document.getElementById('lerf_splash').style.opacity = "1";
+              document.getElementById('lerf_under').style.opacity = "0";
+            }
+            lerf_stop()
+          </script>
+        </div>
+        <div class="paper-content">
+          <!-- TITLE -->
+          <a href="https://lerf.io"><papertitle>LERF: Language Embedded Radiance Fields</papertitle></a>
+          <br>
+          <!-- AUTHORS -->
+          <b>Justin Kerr</b>*, Chung Min Kim*, Ken Goldberg, Angjoo Kanazawa, Matthew Tancik
+          <br>
+          *Equal contribution
+          <br>
+          <!-- CONFERENCE -->
+          <em>ICCV</em> 2023 <b>Oral</b>
+          <!-- LINKS -->
+          <br>
+          <a href="https://arxiv.org/abs/2303.09553">arXiv</a> / <a href="https://lerf.io">Website</a>
+          <p></p>
+          <!-- SUMMARY -->
+          Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D
+        </div>
+      </div>
+      <!-- TACVIS -->
+      <div class="paper-item" onmouseout="tacvis_stop()" onmouseover="tacvis_start()">
+        <div class="paper-image">
+          <!-- IMAGES -->
+          <div class="one">
+            <div class="two" id='tacvis_under'>
+              <img src="images/tacvis_under.png"/>
+            </div>
+            <img src="images/tacvis_splash.png" id='tacvis_splash'/>
+          </div>
+          <!-- SCRIPT FOR HOVERING -->
+          <script type="text/javascript">
+            function tacvis_start() {
+              document.getElementById('tacvis_splash').style.opacity = "0";
+              document.getElementById('tacvis_under').style.opacity = "1";
+            }
+
+            function tacvis_stop() {
+              document.getElementById('tacvis_splash').style.opacity = "1";
+              document.getElementById('tacvis_under').style.opacity = "0";
+            }
+            tacvis_stop()
+          </script>
+        </div>
+        <div class="paper-content">
+          <!-- TITLE -->
+          <a href="https://arxiv.org/abs/2209.13042"><papertitle>Self-Supervised Visuo-Tactile Pretraining to Locate and Follow Garment Features</papertitle></a>
+          <br>
+          <!-- AUTHORS -->
+          <b>Justin Kerr</b>*, Huang Huang*, Albert Wilcox, Ryan Hoque, Jeffrey Ichnowski, Roberto Calandra, and Ken Goldberg
+          <br>
+          *Equal contribution
+          <br>
+          <!-- CONFERENCE -->
+          <em>RSS</em> 2023
+          <!-- LINKS -->
+          <br>
+          <a href="https://arxiv.org/abs/2209.13042">arXiv</a> / <a href="https://sites.google.com/berkeley.edu/ssvtp">Website</a>
+          <p></p>
+          <!-- SUMMARY -->
+          We collect spatially paired vision and tactile inputs with a custom rig to train cross-modal representations. We then show these representations can be used for multiple active and passive perception tasks without fine-tuning.
+        </div>
+      </div>
+      <!-- EVO-NERF -->
+      <div class="paper-item" onmouseout="evonerf_stop()" onmouseover="evonerf_start()">
+        <div class="paper-image">
+          <!-- IMAGES -->
+          <div class="one">
+            <div class="two" id='evonerf_under'>
+              <img src="images/evonerf_early_stop.png"/>
+            </div>
+            <video  muted autoplay loop id="evonerf_splash">
+              <source src="images/evonerf_splash_720p.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <!-- SCRIPT FOR HOVERING -->
+          <script type="text/javascript">
+            function evonerf_start() {
+              document.getElementById('evonerf_splash').style.opacity = "0";
+              document.getElementById('evonerf_under').style.opacity = "1";
+            }
+
+            function evonerf_stop() {
+              document.getElementById('evonerf_splash').style.opacity = "1";
+              document.getElementById('evonerf_under').style.opacity = "0";
+            }
+            evonerf_stop()
+          </script>
+        </div>
+        <div class="paper-content">
+          <!-- TITLE -->
+          <a href="https://sites.google.com/view/evo-nerf">
+            <papertitle>Evo-NeRF: Evolving NeRF for Sequential Robot Grasping</papertitle>
+          </a>
+          <br>
+          <!-- AUTHORS -->
+          <b>Justin Kerr</b>, Letian Fu, Huang Huang, Yahav Avigal, Matthew Tancik, Jeffrey Ichnowski, Angjoo Kanazawa, Ken Goldberg
+          <br>
+          <!-- CONFERENCE -->
+          <em>CoRL</em> 2022, <b>Oral Presentation</b>
+          <!-- LINKS -->
+          <br>
+          <a href="https://sites.google.com/view/evo-nerf">Website</a>
+          /
+          <a href="https://openreview.net/forum?id=Bxr45keYrf">OpenReview</a>
+          <p></p>
+          <!-- SUMMARY -->
+          NeRF functions as a real-time, updateable scene reconstruction for rapidly grasping table-top transparent objects.
+          Geometry regularization speeds and improves scene geometry, and a NeRF-adapted grasping network learns to ignore floaters.
+        </div>
+      </div>
+      <!-- LUV -->
+      <div class="paper-item" onmouseout="luv_stop()" onmouseover="luv_start()">
+        <div class="paper-image">
+          <!-- IMAGES -->
+          <div class="one">
+            <div class="two" id='luv_splash'>
+              <video  muted autoplay loop>
+                <source src="images/luv_splash.mp4" type="video/mp4">
+                Your browser does not support the video tag.
                 </video>
-              </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function garfield_start() {
-                  document.getElementById('garfield_splash').style.opacity = "0";
-                  document.getElementById('garfield_under').style.opacity = "1";
-                }
+            </div>
+            <!-- <img src='images/luv_splash.png' width="180" id="luv_under"> -->
+            <video  muted autoplay loop id="luv_under">
+              <source src="images/luv_smoothing_720p.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <!-- SCRIPT FOR HOVERING -->
+          <script type="text/javascript">
+            function luv_start() {
+              document.getElementById('luv_splash').style.opacity = "0";
+              document.getElementById('luv_under').style.opacity = "1";
+            }
 
-                function garfield_stop() {
-                  document.getElementById('garfield_splash').style.opacity = "1";
-                  document.getElementById('garfield_under').style.opacity = "0";
-                }
-                garfield_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:70%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://www.garfield.studio/"><papertitle>GARField: Group Anything with Radiance Fields
-              </papertitle></a>
-              <br>
-              <!-- AUTHORS -->
-              Chung Min Kim*, Mingxuan Wu*, <b>Justin Kerr</b>*, Ken Goldberg, Matthew Tancik, Angjoo Kanazawa
-              <br>
-              *Equal contribution
-              <br>
-              <!-- CONFERENCE -->
-              <em>CVPR</em> 2024
-              <!-- LINKS -->
-              <br>
-              <a href="https://arxiv.org/abs/2401.09419">arXiv</a> / <a href="https://www.garfield.studio/">Website</a>
-              <p></p>
-              <!-- SUMMARY -->
-              Hierarchical grouping in 3D by training a scale-conditioned affinity field from multi-level masks
-            </td>
-          </tr>
+            function luv_stop() {
+              document.getElementById('luv_splash').style.opacity = "1";
+              document.getElementById('luv_under').style.opacity = "0";
+            }
+            luv_stop()
+          </script>
+        </div>
+        <div class="paper-content">
+          <!-- TITLE -->
+          <a href="https://sites.google.com/berkeley.edu/luv">
+            <papertitle>All You Need is LUV: Unsupervised Collection of Labeled Images using Invisible UV Fluorescent Indicators</papertitle>
+          </a>
+          <br>
+          <!-- AUTHORS -->
+          Brijen Thananjeyan*, <b>Justin Kerr</b>*, Huang Huang, Joseph E. Gonzalez, Ken Goldberg
+          <br>
+          * Equal contribution
+          <br>
+          <!-- CONFERENCE -->
+          <em>IROS</em> 2022
+          <!-- LINKS -->
+          <br>
+          <a href="https://sites.google.com/berkeley.edu/luv">Website</a>
+          /
+          <a href="https://arxiv.org/abs/2203.04566">arXiv</a>
+          <p></p>
+          <!-- SUMMARY -->
+          <p>Fluorescent paint enables inexpensive (<$300) and self-supervised data collection of dense image annotations without altering objects' appearance. </p>
+        </div>
+      </div>
+      <!-- SGTM -->
+      <div class="paper-item" onmouseout="sgtm_stop()" onmouseover="sgtm_start()">
+        <div class="paper-image">
+          <!-- IMAGES -->
+          <div class="one">
+            <div class="two" id='sgtm_splash'>
+              <img src="images/sgtm_splash.png"/>
+            </div>
+            <img src='images/sgtm_under.png' id="sgtm_under">
+          </div>
+          <!-- SCRIPT FOR HOVERING -->
+          <script type="text/javascript">
+            function sgtm_start() {
+              document.getElementById('sgtm_splash').style.opacity = "0";
+              document.getElementById('sgtm_under').style.opacity = "1";
+            }
 
+            function sgtm_stop() {
+              document.getElementById('sgtm_splash').style.opacity = "1";
+              document.getElementById('sgtm_under').style.opacity = "0";
+            }
+            sgtm_stop()
+          </script>
+        </div>
+        <div class="paper-content">
+          <!-- TITLE -->
+          <a href="https://sites.google.com/view/rss-2022-untangling/home">
+            <papertitle>Autonomously Untangling Long Cables</papertitle>
+          </a>
+          <br>
+          <!-- AUTHORS -->
+          Vainavi Viswanath*, Kaushik Shivakumar*, <b>Justin Kerr</b>*, Brijen Thananjeyan, Ellen Novoseller, Jeffrey Ichnowski, Alejandro Escontrela, Michael Laskey, Joseph E. Gonzalez, Ken Goldberg
+          <br>
+          * Equal contribution
+          <br>
+          <!-- CONFERENCE -->
+          <em>RSS</em> 2022, <b>Best Systems Paper Award</b>
+          <!-- LINKS -->
+          <br>
+          <a href="https://sites.google.com/view/rss-2022-untangling/home">Website</a>
+          /
+          <a href="http://www.roboticsproceedings.org/rss18/p034.pdf">Paper</a>
+          <p></p>
+          <!-- SUMMARY -->
+          <p>A sliding-pinching dual-mode gripper enables untangling charging cables with manipulation primitives to simplify perception coupled with learned perception modules.</p>
+        </div>
+      </div>
+      <!-- DEXNERF -->
+      <div class="paper-item" onmouseout="dexnerf_stop()" onmouseover="dexnerf_start()">
+        <div class="paper-image">
+          <!-- IMAGES -->
+          <div class="one">
+            <div class="two" id='dexnerf_splash'>
+              <img src="images/dexnerf_splash.png"/>
+            </div>
+            <img src='images/dexnerf_under.jpeg' id="dexnerf_under">
+          </div>
+          <!-- SCRIPT FOR HOVERING -->
+          <script type="text/javascript">
+            function dexnerf_start() {
+              document.getElementById('dexnerf_splash').style.opacity = "0";
+              document.getElementById('dexnerf_under').style.opacity = "1";
+            }
 
-          <!-- Lerf-togo -->
-          <tr onmouseout="lerftogo_stop()" onmouseover="lerftogo_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <!-- IMAGES -->
-              <div class="one">
-                <div class="two" id='lerftogo_under'>
-                  <img src="images/lerftogo_under.jpg" width=100%/>
-                </div>
-                <video  width=115% height=100% muted autoplay loop id="lerftogo_splash">
-                  <source src="images/lerftogo_splash.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function lerftogo_start() {
-                  document.getElementById('lerftogo_splash').style.opacity = "0";
-                  document.getElementById('lerftogo_under').style.opacity = "1";
-                }
+            function dexnerf_stop() {
+              document.getElementById('dexnerf_splash').style.opacity = "1";
+              document.getElementById('dexnerf_under').style.opacity = "0";
+            }
+            dexnerf_stop()
+          </script>
+        </div>
+        <div class="paper-content">
+          <!-- TITLE -->
+          <a href="https://sites.google.com/view/dex-nerf">
+            <papertitle>Dex-NeRF: Using a Neural Radiance Field to Grasp Transparent Objects</papertitle>
+          </a>
+          <br>
+          <!-- AUTHORS -->
+          Jeffrey Ichnowski*, Yahav Avigal*, <b>Justin Kerr</b>, Ken Goldberg
+          <br>
+          * Equal contribution
+          <br>
+          <!-- CONFERENCE -->
+          <em>CoRL</em> 2021
+          <!-- LINKS -->
+          <br>
+          <a href="https://sites.google.com/view/dex-nerf">Website</a>
+          /
+          <a href="https://arxiv.org/abs/2110.14217">arXiv</a>
+          <p></p>
+          <!-- SUMMARY -->
+          <p>Using NeRF to reconstruct scenes with offline calibrated camera poses can produce graspable geometry even on reflective and transparent objects.</p>
+        </div>
+      </div>
+      <!-- HOUSTON -->
+      <div class="paper-item" onmouseout="houston_stop()" onmouseover="houston_start()">
+        <div class="paper-image">
+          <!-- IMAGES -->
+          <div class="one">
+            <div class="two" id='houston_splash'>
+              <img src="images/houston_splash.png"/>
+            </div>
+            <img src='images/houston_flow.png' id="houston_flow">
+          </div>
+          <!-- SCRIPT FOR HOVERING -->
+          <script type="text/javascript">
+            function houston_start() {
+              document.getElementById('houston_splash').style.opacity = "0";
+              document.getElementById('houston_flow').style.opacity = "1";
+            }
 
-                function lerftogo_stop() {
-                  document.getElementById('lerftogo_splash').style.opacity = "1";
-                  document.getElementById('lerftogo_under').style.opacity = "0";
-                }
-                lerftogo_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://lerftogo.github.io"><papertitle>LERF-TOGO: Language Embedded Radiance Fields for Zero-Shot Task-Oriented Grasping
-              </papertitle></a>
-              <br>
-              <!-- AUTHORS -->
-              Adam Rashid*, Satvik Sharma*, Chung Min Kim, <b>Justin Kerr</b>, Lawrence Yunliang Chen, Angjoo Kanazawa, Ken Goldberg
-              <br>
-              *Equal contribution
-              <br>
-              <!-- CONFERENCE -->
-              <em>CoRL</em> 2023 <b>Oral, Best Paper Finalist</b>
-              <!-- LINKS -->
-              <br>
-              <a href="https://arxiv.org/abs/2309.07970">arXiv</a> / <a href="https://lerftogo.github.io/">Website</a>
-              <p></p>
-              <!-- SUMMARY -->
-              LERF's multi-scale semantics enables 0-shot language-conditioned part grasping for a wide variety of objects.
-            </td>
-          </tr>
-          <!-- LERF -->
-          <tr onmouseout="lerf_stop()" onmouseover="lerf_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <!-- IMAGES -->
-              <div class="one">
-                <div class="two" id='lerf_under'>
-                  <img src="images/lerf_under.svg" width=100%/>
-                </div>
-                <video  width=115% height=100% muted autoplay loop id="lerf_splash">
-                  <source src="images/lerf_splash.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function lerf_start() {
-                  document.getElementById('lerf_splash').style.opacity = "0";
-                  document.getElementById('lerf_under').style.opacity = "1";
-                }
-
-                function lerf_stop() {
-                  document.getElementById('lerf_splash').style.opacity = "1";
-                  document.getElementById('lerf_under').style.opacity = "0";
-                }
-                lerf_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://lerf.io"><papertitle>LERF: Language Embedded Radiance Fields</papertitle></a>
-              <br>
-              <!-- AUTHORS -->
-              <b>Justin Kerr</b>*, Chung Min Kim*, Ken Goldberg, Angjoo Kanazawa, Matthew Tancik
-              <br>
-              *Equal contribution
-              <br>
-              <!-- CONFERENCE -->
-              <em>ICCV</em> 2023 <b>Oral</b>
-              <!-- LINKS -->
-              <br>
-              <a href="https://arxiv.org/abs/2303.09553">arXiv</a> / <a href="https://lerf.io">Website</a>
-              <p></p>
-              <!-- SUMMARY -->
-              Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D
-            </td>
-          </tr>
-          <!-- TACVIS -->
-          <tr onmouseout="tacvis_stop()" onmouseover="tacvis_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <!-- IMAGES -->
-              <div class="one">
-                <div class="two" id='tacvis_under'>
-                  <img src="images/tacvis_under.png" width='100%'/>
-                </div>
-                <img src="images/tacvis_splash.png" width='100%' id='tacvis_splash'/>
-              </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function tacvis_start() {
-                  document.getElementById('tacvis_splash').style.opacity = "0";
-                  document.getElementById('tacvis_under').style.opacity = "1";
-                }
-
-                function tacvis_stop() {
-                  document.getElementById('tacvis_splash').style.opacity = "1";
-                  document.getElementById('tacvis_under').style.opacity = "0";
-                }
-                tacvis_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://arxiv.org/abs/2209.13042"><papertitle>Self-Supervised Visuo-Tactile Pretraining to Locate and Follow Garment Features</papertitle></a>
-              <br>
-              <!-- AUTHORS -->
-              <b>Justin Kerr</b>*, Huang Huang*, Albert Wilcox, Ryan Hoque, Jeffrey Ichnowski, Roberto Calandra, and Ken Goldberg
-              <br>
-              *Equal contribution
-              <br>
-              <!-- CONFERENCE -->
-              <em>RSS</em> 2023
-              <!-- LINKS -->
-              <br>
-              <a href="https://arxiv.org/abs/2209.13042">arXiv</a> / <a href="https://sites.google.com/berkeley.edu/ssvtp">Website</a>
-              <p></p>
-              <!-- SUMMARY -->
-              We collect spatially paired vision and tactile inputs with a custom rig to train cross-modal representations. We then show these representations can be used for multiple active and passive perception tasks without fine-tuning.
-            </td>
-          </tr>
-          <!-- EVO-NERF -->
-          <tr onmouseout="evonerf_stop()" onmouseover="evonerf_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <!-- IMAGES -->
-              <div class="one">
-                <div class="two" id='evonerf_under'>
-                  <img src="images/evonerf_early_stop.png" width='100%'/>
-                </div>
-                <video  width=115% height=100% muted autoplay loop id="evonerf_splash">
-                  <source src="images/evonerf_splash.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function evonerf_start() {
-                  document.getElementById('evonerf_splash').style.opacity = "0";
-                  document.getElementById('evonerf_under').style.opacity = "1";
-                }
-
-                function evonerf_stop() {
-                  document.getElementById('evonerf_splash').style.opacity = "1";
-                  document.getElementById('evonerf_under').style.opacity = "0";
-                }
-                evonerf_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://sites.google.com/view/evo-nerf">
-                <papertitle>Evo-NeRF: Evolving NeRF for Sequential Robot Grasping</papertitle>
-              </a>
-              <br>
-              <!-- AUTHORS -->
-              <b>Justin Kerr</b>, Letian Fu, Huang Huang, Yahav Avigal, Matthew Tancik, Jeffrey Ichnowski, Angjoo Kanazawa, Ken Goldberg
-              <br>
-              <!-- CONFERENCE -->
-              <em>CoRL</em> 2022, <b>Oral Presentation</b>
-              <!-- LINKS -->
-              <br>
-              <a href="https://sites.google.com/view/evo-nerf">Website</a>
-              /
-              <a href="https://openreview.net/forum?id=Bxr45keYrf">OpenReview</a>
-              <p></p>
-              <!-- SUMMARY -->
-              NeRF functions as a real-time, updateable scene reconstruction for rapidly grasping table-top transparent objects.
-              Geometry regularization speeds and improves scene geometry, and a NeRF-adapted grasping network learns to ignore floaters.
-            </td>
-          </tr>
-          <!-- LUV -->
-          <tr onmouseout="luv_stop()" onmouseover="luv_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <!-- IMAGES -->
-              <div class="one">
-                <div class="two" id='luv_splash'>
-                  <video  width=115% height=100% muted autoplay loop>
-                    <source src="images/luv_splash.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                    </video>
-                </div>
-                <!-- <img src='images/luv_splash.png' width="180" id="luv_under"> -->
-                <video  width=115% height=100% muted autoplay loop id="luv_under">
-                  <source src="images/luv_smoothing.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function luv_start() {
-                  document.getElementById('luv_splash').style.opacity = "0";
-                  document.getElementById('luv_under').style.opacity = "1";
-                }
-
-                function luv_stop() {
-                  document.getElementById('luv_splash').style.opacity = "1";
-                  document.getElementById('luv_under').style.opacity = "0";
-                }
-                luv_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://sites.google.com/berkeley.edu/luv">
-                <papertitle>All You Need is LUV: Unsupervised Collection of Labeled Images using Invisible UV Fluorescent Indicators</papertitle>
-              </a>
-              <br>
-              <!-- AUTHORS -->
-              Brijen Thananjeyan*, <b>Justin Kerr</b>*, Huang Huang, Joseph E. Gonzalez, Ken Goldberg
-              <br>
-              * Equal contribution
-              <br>
-              <!-- CONFERENCE -->
-              <em>IROS</em> 2022
-              <!-- LINKS -->
-              <br>
-              <a href="https://sites.google.com/berkeley.edu/luv">Website</a>
-              /
-              <a href="https://arxiv.org/abs/2203.04566">arXiv</a>
-              <p></p>
-              <!-- SUMMARY -->
-              <p>Fluorescent paint enables inexpensive (<$300) and self-supervised data collection of dense image annotations without altering objects' appearance. </p>
-            </td>
-          </tr>
-          <!-- SGTM -->
-          <tr onmouseout="sgtm_stop()" onmouseover="sgtm_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <!-- IMAGES -->
-              <div class="one">
-                <div class="two" id='sgtm_splash'>
-                  <img src="images/sgtm_splash.png" width='100%'/>
-                </div>
-                <img src='images/sgtm_under.png' width="100%" id="sgtm_under">
-              </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function sgtm_start() {
-                  document.getElementById('sgtm_splash').style.opacity = "0";
-                  document.getElementById('sgtm_under').style.opacity = "1";
-                }
-
-                function sgtm_stop() {
-                  document.getElementById('sgtm_splash').style.opacity = "1";
-                  document.getElementById('sgtm_under').style.opacity = "0";
-                }
-                sgtm_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://sites.google.com/view/rss-2022-untangling/home">
-                <papertitle>Autonomously Untangling Long Cables</papertitle>
-              </a>
-              <br>
-              <!-- AUTHORS -->
-              Vainavi Viswanath*, Kaushik Shivakumar*, <b>Justin Kerr</b>*, Brijen Thananjeyan, Ellen Novoseller, Jeffrey Ichnowski, Alejandro Escontrela, Michael Laskey, Joseph E. Gonzalez, Ken Goldberg
-              <br>
-              * Equal contribution
-              <br>
-              <!-- CONFERENCE -->
-              <em>RSS</em> 2022, <b>Best Systems Paper Award</b>
-              <!-- LINKS -->
-              <br>
-              <a href="https://sites.google.com/view/rss-2022-untangling/home">Website</a>
-              /
-              <a href="http://www.roboticsproceedings.org/rss18/p034.pdf">Paper</a>
-              <p></p>
-              <!-- SUMMARY -->
-              <p>A sliding-pinching dual-mode gripper enables untangling charging cables with manipulation primitives to simplify perception coupled with learned perception modules.</p>
-            </td>
-          </tr>
-          <!-- DEXNERF -->
-          <tr onmouseout="dexnerf_stop()" onmouseover="dexnerf_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <!-- IMAGES -->
-              <div class="one">
-                <div class="two" id='dexnerf_splash'>
-                  <img src="images/dexnerf_splash.png" width='100%'/>
-                </div>
-                <img src='images/dexnerf_under.jpeg' width="100%" id="dexnerf_under">
-              </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function dexnerf_start() {
-                  document.getElementById('dexnerf_splash').style.opacity = "0";
-                  document.getElementById('dexnerf_under').style.opacity = "1";
-                }
-
-                function dexnerf_stop() {
-                  document.getElementById('dexnerf_splash').style.opacity = "1";
-                  document.getElementById('dexnerf_under').style.opacity = "0";
-                }
-                dexnerf_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://sites.google.com/view/dex-nerf">
-                <papertitle>Dex-NeRF: Using a Neural Radiance Field to Grasp Transparent Objects</papertitle>
-              </a>
-              <br>
-              <!-- AUTHORS -->
-              Jeffrey Ichnowski*, Yahav Avigal*, <b>Justin Kerr</b>, Ken Goldberg
-              <br>
-              * Equal contribution
-              <br>
-              <!-- CONFERENCE -->
-              <em>CoRL</em> 2021
-              <!-- LINKS -->
-              <br>
-              <a href="https://sites.google.com/view/dex-nerf">Website</a>
-              /
-              <a href="https://arxiv.org/abs/2110.14217">arXiv</a>
-              <p></p>
-              <!-- SUMMARY -->
-              <p>Using NeRF to reconstruct scenes with offline calibrated camera poses can produce graspable geometry even on reflective and transparent objects.</p>
-            </td>
-          </tr>
-          <!-- HOUSTON -->
-          <tr onmouseout="houston_stop()" onmouseover="houston_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <!-- IMAGES -->
-              <div class="one">
-                <div class="two" id='houston_splash'>
-                  <img src="images/houston_splash.png" width='100%'/>
-                </div>
-                <img src='images/houston_flow.png' width="100%" id="houston_flow">
-              </div>
-              <!-- SCRIPT FOR HOVERING -->
-              <script type="text/javascript">
-                function houston_start() {
-                  document.getElementById('houston_splash').style.opacity = "0";
-                  document.getElementById('houston_flow').style.opacity = "1";
-                }
-
-                function houston_stop() {
-                  document.getElementById('houston_splash').style.opacity = "1";
-                  document.getElementById('houston_flow').style.opacity = "0";
-                }
-                houston_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <!-- TITLE -->
-              <a href="https://sites.google.com/berkeley.edu/autolab-houston">
-                <papertitle>Learning to Localize, Grasp, and Hand Over Unmodified Surgical Needles</papertitle>
-              </a>
-              <br>
-              <!-- AUTHORS -->
-              Albert Wilcox*,  <b>Justin Kerr</b>*, Brijen Thananjeyan, Jeff Ichnowski, Minho Hwang, Samuel Paradis, Danyal Fer, Ken Goldberg
-              <br>
-              * Equal contribution
-              <br>
-              <!-- CONFERENCE -->
-              <em>ICRA</em> 2022 
-              <!-- LINKS -->
-              <br>
-              <a href="https://sites.google.com/berkeley.edu/autolab-houston">Website</a>
-              /
-              <a href="https://arxiv.org/abs/2112.04071">arXiv</a>
-              <p></p>
-              <!-- SUMMARY -->
-              <p>Combining active perception with behavior cloning can reliably hand a surgical needle back and forth between grippers.</p>
-            </td>
-          </tr>
+            function houston_stop() {
+              document.getElementById('houston_splash').style.opacity = "1";
+              document.getElementById('houston_flow').style.opacity = "0";
+            }
+            houston_stop()
+          </script>
+        </div>
+        <div class="paper-content">
+          <!-- TITLE -->
+          <a href="https://sites.google.com/berkeley.edu/autolab-houston">
+            <papertitle>Learning to Localize, Grasp, and Hand Over Unmodified Surgical Needles</papertitle>
+          </a>
+          <br>
+          <!-- AUTHORS -->
+          Albert Wilcox*,  <b>Justin Kerr</b>*, Brijen Thananjeyan, Jeff Ichnowski, Minho Hwang, Samuel Paradis, Danyal Fer, Ken Goldberg
+          <br>
+          * Equal contribution
+          <br>
+          <!-- CONFERENCE -->
+          <em>ICRA</em> 2022 
+          <!-- LINKS -->
+          <br>
+          <a href="https://sites.google.com/berkeley.edu/autolab-houston">Website</a>
+          /
+          <a href="https://arxiv.org/abs/2112.04071">arXiv</a>
+          <p></p>
+          <!-- SUMMARY -->
+          <p>Combining active perception with behavior cloning can reliably hand a surgical needle back and forth between grippers.</p>
+        </div>
+      </div>
           <!-- below is an example of doing the fancy mouseover thing -->
           <!-- <tr onmouseout="hypernerf_stop()" onmouseover="hypernerf_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
-                <div class="two" id='hypernerf_image'><video  width=100% height=100% muted autoplay loop>
+                <div class="two" id='hypernerf_image'><video  width=100%  muted autoplay loop>
                 <source src="images/hypernerf_after.mp4" type="video/mp4">
                 Your browser does not support the video tag.
                 </video></div>
@@ -639,73 +630,41 @@ for Topologically Varying Neural Radiance Fields</papertitle>
             </td>
           </tr>  -->
 
-        <!-- </tbody></table> -->
-
-        <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr>
-            <td>
-              <heading>Service</heading>
-            </td>
-          </tr>
-        </tbody></table> -->
-        <!-- <table width="100%" align="center" border="0" cellpadding="20"><tbody> -->
-          <!-- <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/cs188.jpg" alt="cs188">
-            </td>
-            <td width="75%" valign="center">
-              <a href="http://inst.eecs.berkeley.edu/~cs188/sp11/announcements.html">Graduate Student Instructor, CS188 Spring 2011</a>
-              <br>
-              <br>
-              <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor, CS188 Fall 2010</a>
-              <br>
-              <br>
-              <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd Edition</a>
-            </td>
-          </tr> -->
-        <!-- </tbody></table> -->
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr>
-            <td>
-              <heading>Personal Projects</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="0"><tbody>
-          <tr>
-            <td style="padding:0px;width:40%;vertical-align:middle;text-align:center" >
-              <a href="images/segway_pic.jpeg"><img src="images/segway_pic.jpeg" alt="segway" height="210"></a>
-            </td>
-            <td width="75%" valign="center">
-              <a href="https://github.com/kerrj/segway">Miniature self-balancing robot</a>, built from scratch using off-the-shelf parts and 
-              able to follow waypoints using model-predictive control for balance and 
-              <a href="https://www.ri.cmu.edu/pub_files/pub3/coulter_r_craig_1992_1/coulter_r_craig_1992_1.pdf">pure pursuit</a> for path following.
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:20px;width:40%;vertical-align:middle;text-align: center;">
-              <a href="images/mapper_pic.jpeg"><img src="images/mapper_pic.jpeg" alt="mapping robot" height="182"></a>
-              <a href="images/map_pic.png"><img src="images/map_pic.png" alt="map" height="182"></a>
-            </td>
-            <td width="75%" valign="center">
-              <a href="https://github.com/kerrj/mapper">Indoor mapping robot</a> built from scratch with a cheap planar lidar which autonomously mapped my house using a 
-              <a href="https://research.google/pubs/pub45466/">Google Cartographer</a>-inspired SLAM algorithm, 
-                alongside a grid path planner for exploration and <a href="https://en.wikipedia.org/wiki/Dynamic_window_approach">DWA</a> controller for path following. 
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <p>
-                Source code taken from <a href="https://jonbarron.info/">Jon Barron's site.</a>
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </table>
+    </div>
+    
+    <div class="projects-section">
+      <heading>Personal Projects</heading>
+      
+      <div class="project-item">
+        <div class="project-images">
+          <a href="images/segway_pic.jpeg"><img src="images/segway_pic.jpeg" alt="segway" height="210"></a>
+        </div>
+        <div class="project-content">
+          <a href="https://github.com/kerrj/segway">Miniature self-balancing robot</a>, built from scratch using off-the-shelf parts and 
+          able to follow waypoints using model-predictive control for balance and 
+          <a href="https://www.ri.cmu.edu/pub_files/pub3/coulter_r_craig_1992_1/coulter_r_craig_1992_1.pdf">pure pursuit</a> for path following.
+        </div>
+      </div>
+      
+      <div class="project-item">
+        <div class="project-images">
+          <a href="images/mapper_pic.jpeg"><img src="images/mapper_pic.jpeg" alt="mapping robot" height="182"></a>
+          <a href="images/map_pic.png"><img src="images/map_pic.png" alt="map" height="182"></a>
+        </div>
+        <div class="project-content">
+          <a href="https://github.com/kerrj/mapper">Indoor mapping robot</a> built from scratch with a cheap planar lidar which autonomously mapped my house using a 
+          <a href="https://research.google/pubs/pub45466/">Google Cartographer</a>-inspired SLAM algorithm, 
+            alongside a grid path planner for exploration and <a href="https://en.wikipedia.org/wiki/Dynamic_window_approach">DWA</a> controller for path following. 
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>
+        Source code taken from <a href="https://jonbarron.info/">Jon Barron's site.</a>
+      </p>
+    </div>
+  </div>
 </body>
 
 </html>
