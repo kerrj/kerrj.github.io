@@ -19,6 +19,20 @@
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/seal_icon.png">
+  <script type="text/javascript">
+    function setupPaperHover(paperName) {
+      return {
+        start: function() {
+          document.getElementById(paperName + '_splash').style.opacity = "0";
+          document.getElementById(paperName + '_under').style.opacity = "1";
+        },
+        stop: function() {
+          document.getElementById(paperName + '_splash').style.opacity = "1";
+          document.getElementById(paperName + '_under').style.opacity = "0";
+        }
+      };
+    }
+  </script>
 </head>
 
 <body>
@@ -66,16 +80,10 @@
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
-            function eyerobot_start() {
-              document.getElementById('eyerobot_splash').style.opacity = "0";
-              document.getElementById('eyerobot_under').style.opacity = "1";
-            }
-
-            function eyerobot_stop() {
-              document.getElementById('eyerobot_splash').style.opacity = "1";
-              document.getElementById('eyerobot_under').style.opacity = "0";
-            }
-            eyerobot_stop()
+            const eyerobot = setupPaperHover('eyerobot');
+            const eyerobot_start = eyerobot.start;
+            const eyerobot_stop = eyerobot.stop;
+            eyerobot_stop();
           </script>
         </div>
         <div class="paper-content">
@@ -143,16 +151,10 @@
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
-            function pogs_start() {
-              document.getElementById('pogs_splash').style.opacity = "0";
-              document.getElementById('pogs_under').style.opacity = "1";
-            }
-
-            function pogs_stop() {
-              document.getElementById('pogs_splash').style.opacity = "1";
-              document.getElementById('pogs_under').style.opacity = "0";
-            }
-            pogs_stop()
+            const pogs = setupPaperHover('pogs');
+            const pogs_start = pogs.start;
+            const pogs_stop = pogs.stop;
+            pogs_stop();
           </script>
         </div>
         <div class="paper-content">
@@ -193,16 +195,10 @@
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
-            function robotsee_start() {
-              document.getElementById('robotsee_splash').style.opacity = "0";
-              document.getElementById('robotsee_under').style.opacity = "1";
-            }
-
-            function robotsee_stop() {
-              document.getElementById('robotsee_splash').style.opacity = "1";
-              document.getElementById('robotsee_under').style.opacity = "0";
-            }
-            robotsee_stop()
+            const robotsee = setupPaperHover('robotsee');
+            const robotsee_start = robotsee.start;
+            const robotsee_stop = robotsee.stop;
+            robotsee_stop();
           </script>
         </div>
         <div class="paper-content">
@@ -242,16 +238,10 @@
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
-            function garfield_start() {
-              document.getElementById('garfield_splash').style.opacity = "0";
-              document.getElementById('garfield_under').style.opacity = "1";
-            }
-
-            function garfield_stop() {
-              document.getElementById('garfield_splash').style.opacity = "1";
-              document.getElementById('garfield_under').style.opacity = "0";
-            }
-            garfield_stop()
+            const garfield = setupPaperHover('garfield');
+            const garfield_start = garfield.start;
+            const garfield_stop = garfield.stop;
+            garfield_stop();
           </script>
         </div>
         <div class="paper-content">
@@ -289,16 +279,10 @@
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
-            function lerftogo_start() {
-              document.getElementById('lerftogo_splash').style.opacity = "0";
-              document.getElementById('lerftogo_under').style.opacity = "1";
-            }
-
-            function lerftogo_stop() {
-              document.getElementById('lerftogo_splash').style.opacity = "1";
-              document.getElementById('lerftogo_under').style.opacity = "0";
-            }
-            lerftogo_stop()
+            const lerftogo = setupPaperHover('lerftogo');
+            const lerftogo_start = lerftogo.start;
+            const lerftogo_stop = lerftogo.stop;
+            lerftogo_stop();
           </script>
         </div>
         <div class="paper-content">
@@ -334,16 +318,10 @@
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
-            function lerf_start() {
-              document.getElementById('lerf_splash').style.opacity = "0";
-              document.getElementById('lerf_under').style.opacity = "1";
-            }
-
-            function lerf_stop() {
-              document.getElementById('lerf_splash').style.opacity = "1";
-              document.getElementById('lerf_under').style.opacity = "0";
-            }
-            lerf_stop()
+            const lerf = setupPaperHover('lerf');
+            const lerf_start = lerf.start;
+            const lerf_stop = lerf.stop;
+            lerf_stop();
           </script>
         </div>
         <div class="paper-content">
@@ -375,16 +353,10 @@
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
-            function tacvis_start() {
-              document.getElementById('tacvis_splash').style.opacity = "0";
-              document.getElementById('tacvis_under').style.opacity = "1";
-            }
-
-            function tacvis_stop() {
-              document.getElementById('tacvis_splash').style.opacity = "1";
-              document.getElementById('tacvis_under').style.opacity = "0";
-            }
-            tacvis_stop()
+            const tacvis = setupPaperHover('tacvis');
+            const tacvis_start = tacvis.start;
+            const tacvis_stop = tacvis.stop;
+            tacvis_stop();
           </script>
         </div>
         <div class="paper-content">
@@ -419,16 +391,10 @@
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
-            function evonerf_start() {
-              document.getElementById('evonerf_splash').style.opacity = "0";
-              document.getElementById('evonerf_under').style.opacity = "1";
-            }
-
-            function evonerf_stop() {
-              document.getElementById('evonerf_splash').style.opacity = "1";
-              document.getElementById('evonerf_under').style.opacity = "0";
-            }
-            evonerf_stop()
+            const evonerf = setupPaperHover('evonerf');
+            const evonerf_start = evonerf.start;
+            const evonerf_stop = evonerf.stop;
+            evonerf_stop();
           </script>
         </div>
         <div class="paper-content">
@@ -464,7 +430,6 @@
                 Your browser does not support the video tag.
                 </video>
             </div>
-            <!-- <img src='images/luv_splash.png' width="180" id="luv_under"> -->
             <video  muted autoplay loop id="luv_under">
               <source src="images/luv_smoothing_720p.mp4" type="video/mp4">
               Your browser does not support the video tag.
@@ -472,16 +437,10 @@
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
-            function luv_start() {
-              document.getElementById('luv_splash').style.opacity = "0";
-              document.getElementById('luv_under').style.opacity = "1";
-            }
-
-            function luv_stop() {
-              document.getElementById('luv_splash').style.opacity = "1";
-              document.getElementById('luv_under').style.opacity = "0";
-            }
-            luv_stop()
+            const luv = setupPaperHover('luv');
+            const luv_start = luv.start;
+            const luv_stop = luv.stop;
+            luv_stop();
           </script>
         </div>
         <div class="paper-content">
@@ -517,16 +476,10 @@
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
-            function sgtm_start() {
-              document.getElementById('sgtm_splash').style.opacity = "0";
-              document.getElementById('sgtm_under').style.opacity = "1";
-            }
-
-            function sgtm_stop() {
-              document.getElementById('sgtm_splash').style.opacity = "1";
-              document.getElementById('sgtm_under').style.opacity = "0";
-            }
-            sgtm_stop()
+            const sgtm = setupPaperHover('sgtm');
+            const sgtm_start = sgtm.start;
+            const sgtm_stop = sgtm.stop;
+            sgtm_stop();
           </script>
         </div>
         <div class="paper-content">
@@ -562,16 +515,10 @@
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
-            function dexnerf_start() {
-              document.getElementById('dexnerf_splash').style.opacity = "0";
-              document.getElementById('dexnerf_under').style.opacity = "1";
-            }
-
-            function dexnerf_stop() {
-              document.getElementById('dexnerf_splash').style.opacity = "1";
-              document.getElementById('dexnerf_under').style.opacity = "0";
-            }
-            dexnerf_stop()
+            const dexnerf = setupPaperHover('dexnerf');
+            const dexnerf_start = dexnerf.start;
+            const dexnerf_stop = dexnerf.stop;
+            dexnerf_stop();
           </script>
         </div>
         <div class="paper-content">
@@ -603,20 +550,14 @@
             <div class="two" id='houston_splash'>
               <img src="images/houston_splash.png"/>
             </div>
-            <img src='images/houston_flow.png' id="houston_flow">
+            <img src='images/houston_flow.png' id="houston_under">
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
-            function houston_start() {
-              document.getElementById('houston_splash').style.opacity = "0";
-              document.getElementById('houston_flow').style.opacity = "1";
-            }
-
-            function houston_stop() {
-              document.getElementById('houston_splash').style.opacity = "1";
-              document.getElementById('houston_flow').style.opacity = "0";
-            }
-            houston_stop()
+            const houston = setupPaperHover('houston');
+            const houston_start = houston.start;
+            const houston_stop = houston.stop;
+            houston_stop();
           </script>
         </div>
         <div class="paper-content">
@@ -653,16 +594,10 @@
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
-            function primal_start() {
-              document.getElementById('primal_splash').style.opacity = "0";
-              document.getElementById('primal_under').style.opacity = "1";
-            }
-
-            function primal_stop() {
-              document.getElementById('primal_splash').style.opacity = "1";
-              document.getElementById('primal_under').style.opacity = "0";
-            }
-            primal_stop()
+            const primal = setupPaperHover('primal');
+            const primal_start = primal.start;
+            const primal_stop = primal.stop;
+            primal_stop();
           </script>
         </div>
         <div class="paper-content">
@@ -684,51 +619,6 @@
           <em style="opacity: 0.625">A novel framework for multi-agent pathfinding that combines reinforcement and imitation learning to teach fully decentralized policies, validated with up to 1024 agents.</em>
         </div>
       </div>
-          <!-- below is an example of doing the fancy mouseover thing -->
-          <!-- <tr onmouseout="hypernerf_stop()" onmouseover="hypernerf_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='hypernerf_image'><video  width=100%  muted autoplay loop>
-                <source src="images/hypernerf_after.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video></div>
-                <img src='images/hypernerf_before.jpg' width="160">
-              </div>
-              <script type="text/javascript">
-                function hypernerf_start() {
-                  document.getElementById('hypernerf_image').style.opacity = "1";
-                }
-
-                function hypernerf_stop() {
-                  document.getElementById('hypernerf_image').style.opacity = "0";
-                }
-                hypernerf_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://hypernerf.github.io/">
-                <papertitle>HyperNeRF: A Higher-Dimensional Representation
-for Topologically Varying Neural Radiance Fields</papertitle>
-              </a>
-              <br>
-							<a href="https://keunhong.com">Keunhong Park</a>,
-							<a href="https://utkarshsinha.com">Utkarsh Sinha</a>, 
-							<a href="https://phogzone.com/">Peter Hedman</a>,
-              <strong>Jonathan T. Barron</strong>, <br>
-							<a href="http://sofienbouaziz.com">Sofien Bouaziz</a>,
-							<a href="https://www.danbgoldman.com">Dan B Goldman</a>,
-							<a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a>, 
-							<a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a>
-              <br>
-              <em>SIGGRAPH Asia</em>, 2021 
-              <br>
-              <a href="https://hypernerf.github.io/">project page</a>
-              /
-              <a href="https://arxiv.org/abs/2106.13228">arXiv</a>
-              <p></p>
-              <p>Applying ideas from level set methods to NeRF lets you represent scenes that deform and change shape.</p>
-            </td>
-          </tr>  -->
 
     </div>
     
