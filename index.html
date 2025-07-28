@@ -31,7 +31,7 @@
         <p>
           I'm a 4th year PhD at Berkeley's AI Research Lab co-advised by Angjoo Kanazawa and Ken Goldberg. My work primarily involves 3D multi-modal reconstruction and how it can enable robotic manipulation.
           Lately I've been interested in active vision; how can we get robots to look around like we do to accomplish tasks?
-           I'm also a maintainer of <a href="https://github.com/nerfstudio-project/nerfstudio">Nerfstudio</a>, a large open-source, open-license repo for 3D neural reconstruction. My work is supported by the NSF GRFP.
+           I'm also a maintainer of <a href="https://github.com/nerfstudio-project/nerfstudio">Nerfstudio</a>, a large open-source repo for 3D neural reconstruction. My work is supported by the NSF GRFP.
         </p>
         <p>
           Previously I finished my bachelor's at CMU where I worked with Howie Choset on multi-robot path planning, and spent time at Berkshire Grey and NASA's JPL.
@@ -50,8 +50,8 @@
     <div class="papers-section">
       <heading>Papers</heading>
       <!-- EyeRobot -->
-      <div class="paper-item" onmouseout="eyerobot_stop()" onmouseover="eyerobot_start()">
-        <div class="paper-image">
+      <div class="paper-item">
+        <div class="paper-image" onmouseout="eyerobot_stop()" onmouseover="eyerobot_start()">
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='eyerobot_under'>
@@ -97,14 +97,88 @@
           <a href="https://www.eyerobot.net">Website</a>
           <p></p>
           <!-- SUMMARY -->
-          We train a robot eyeball policy to look around to enable the performance of a BC arm agent.
-          Eye gaze emerges from RL by co-training with the BC agent and rewarding the eye for correct arm predictions.
+          <em style="opacity: 0.625">We train a robot eyeball policy to look around to enable the performance of a BC arm agent.
+          Eye gaze emerges from RL by co-training with the BC agent and rewarding the eye for correct arm predictions.</em>
+        </div>
+      </div>
+          
+      <!-- POD -->
+      <div class="paper-item">
+        <div class="paper-image">
+          <!-- IMAGES -->
+          <div class="one">
+            <img src='images/pod_splash.png'>
+          </div>
+        </div>
+        <div class="paper-content">
+          <!-- TITLE -->
+          <a href="https://predict-optimize-distill.github.io/pod.github.io">
+            <papertitle>Predict-Optimize-Distill: A Self-Improving Cycle for 4D Object Understanding</papertitle>
+          </a>
+          <br>
+          <!-- AUTHORS -->
+          Mingxuan Wu*, Huang Huang*, <b>Justin Kerr</b>, Chung Min Kim, Anthony Zhang, Brent Yi, Angjoo Kanazawa
+          <br>
+          <!-- CONFERENCE -->
+          <em>ICCV</em> 2025
+          <!-- LINKS -->
+          <br>
+          <a href="https://arxiv.org/abs/2504.17441">arXiv</a>
+          /
+          <a href="https://predict-optimize-distill.github.io/pod.github.io">Website</a>
+          <p></p>
+          <!-- SUMMARY -->
+          <em style="opacity: 0.625">A self-improving framework that builds intuition for predicting 3D object configurations through iterative observation, prediction, and optimization cycles.</em>
+        </div>
+      </div>
+          
+      <!-- POGS -->
+      <div class="paper-item">
+        <div class="paper-image" onmouseout="pogs_stop()" onmouseover="pogs_start()">
+          <!-- IMAGES -->
+          <div class="one">
+            <div class="two" id='pogs_under'>
+              <img src="images/pogs_under.png"/>
+            </div>
+            <img src='images/pogs_splash.png' id="pogs_splash">
+          </div>
+          <!-- SCRIPT FOR HOVERING -->
+          <script type="text/javascript">
+            function pogs_start() {
+              document.getElementById('pogs_splash').style.opacity = "0";
+              document.getElementById('pogs_under').style.opacity = "1";
+            }
+
+            function pogs_stop() {
+              document.getElementById('pogs_splash').style.opacity = "1";
+              document.getElementById('pogs_under').style.opacity = "0";
+            }
+            pogs_stop()
+          </script>
+        </div>
+        <div class="paper-content">
+          <!-- TITLE -->
+          <a href="https://arxiv.org/abs/2503.05189">
+            <papertitle>Persistent Object Gaussian Splat (POGS) for Tracking Human and Robot Manipulation of Irregularly Shaped Objects</papertitle>
+          </a>
+          <br>
+          <!-- AUTHORS -->
+          Justin Yu*, Kush Hari*, Karim El-Refai*, Arnav Dalal, <b>Justin Kerr</b>, Chung Min Kim, Richard Cheng, Muhammad Zubair Irshad, Ken Goldberg
+          <br>
+          <!-- CONFERENCE -->
+          <em>ICRA</em> 2025
+          <!-- LINKS -->
+          <br>
+          <a href="https://arxiv.org/abs/2503.05189">arXiv</a>
+          <p></p>
+          <!-- SUMMARY -->
+          <em style="opacity: 0.625">Tracking and manipulating irregularly-shaped, previously unseen objects using a single stereo camera with Gaussian splatting for object pose estimation and language-driven manipulation.</em>
         </div>
       </div>
           
       <!-- Robot See Robot Do -->
-      <div class="paper-item" onmouseout="robotsee_stop()" onmouseover="robotsee_start()">
-        <div class="paper-image">
+      <div class="paper-item">
+        <div class="paper-image" onmouseout="robotsee_stop()" onmouseover="robotsee_start()">
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='robotsee_under'>
@@ -141,8 +215,6 @@
           <!-- AUTHORS -->
           <b>Justin Kerr</b>*, Chung Min Kim*, Mingxuan Wu, Brent Yi, Qianqian Wang, Ken Goldberg, Angjoo Kanazawa
           <br>
-          *Equal contribution
-          <br>
           <!-- CONFERENCE -->
           <em>CoRL</em> 2024 <b>Oral</b>
           <!-- LINKS -->
@@ -152,13 +224,13 @@
           <a href="https://robot-see-robot-do.github.io/">Website</a>
           <p></p>
           <!-- SUMMARY -->
-          Object-centric visual imitation from a single video by 4D-reconstructing articulated object motion and transfering to a bimanual robot
+          <em style="opacity: 0.625">Object-centric visual imitation from a single video by 4D-reconstructing articulated object motion and transfering to a bimanual robot</em>
         </div>
       </div>
           
       <!-- GARField -->
-      <div class="paper-item" onmouseout="garfield_stop()" onmouseover="garfield_start()">
-        <div class="paper-image">
+      <div class="paper-item">
+        <div class="paper-image" onmouseout="garfield_stop()" onmouseover="garfield_start()">
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='garfield_under' >
@@ -191,8 +263,6 @@
           <!-- AUTHORS -->
           Chung Min Kim*, Mingxuan Wu*, <b>Justin Kerr</b>*, Ken Goldberg, Matthew Tancik, Angjoo Kanazawa
           <br>
-          *Equal contribution
-          <br>
           <!-- CONFERENCE -->
           <em>CVPR</em> 2024
           <!-- LINKS -->
@@ -200,14 +270,14 @@
           <a href="https://arxiv.org/abs/2401.09419">arXiv</a> / <a href="https://www.garfield.studio/">Website</a>
           <p></p>
           <!-- SUMMARY -->
-          Hierarchical grouping in 3D by training a scale-conditioned affinity field from multi-level masks
+          <em style="opacity: 0.625">Hierarchical grouping in 3D by training a scale-conditioned affinity field from multi-level masks</em>
         </div>
       </div>
 
 
       <!-- Lerf-togo -->
-      <div class="paper-item" onmouseout="lerftogo_stop()" onmouseover="lerftogo_start()">
-        <div class="paper-image">
+      <div class="paper-item">
+        <div class="paper-image" onmouseout="lerftogo_stop()" onmouseover="lerftogo_start()">
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='lerftogo_under'>
@@ -240,8 +310,6 @@
           <!-- AUTHORS -->
           Adam Rashid*, Satvik Sharma*, Chung Min Kim, <b>Justin Kerr</b>, Lawrence Yunliang Chen, Angjoo Kanazawa, Ken Goldberg
           <br>
-          *Equal contribution
-          <br>
           <!-- CONFERENCE -->
           <em>CoRL</em> 2023 <b>Oral, Best Paper Finalist</b>
           <!-- LINKS -->
@@ -249,12 +317,12 @@
           <a href="https://arxiv.org/abs/2309.07970">arXiv</a> / <a href="https://lerftogo.github.io/">Website</a>
           <p></p>
           <!-- SUMMARY -->
-          LERF's multi-scale semantics enables 0-shot language-conditioned part grasping for a wide variety of objects.
+          <em style="opacity: 0.625">LERF's multi-scale semantics enables 0-shot language-conditioned part grasping for a wide variety of objects.</em>
         </div>
       </div>
       <!-- LERF -->
-      <div class="paper-item" onmouseout="lerf_stop()" onmouseover="lerf_start()">
-        <div class="paper-image">
+      <div class="paper-item">
+        <div class="paper-image" onmouseout="lerf_stop()" onmouseover="lerf_start()">
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='lerf_under'>
@@ -286,8 +354,6 @@
           <!-- AUTHORS -->
           <b>Justin Kerr</b>*, Chung Min Kim*, Ken Goldberg, Angjoo Kanazawa, Matthew Tancik
           <br>
-          *Equal contribution
-          <br>
           <!-- CONFERENCE -->
           <em>ICCV</em> 2023 <b>Oral</b>
           <!-- LINKS -->
@@ -295,12 +361,12 @@
           <a href="https://arxiv.org/abs/2303.09553">arXiv</a> / <a href="https://lerf.io">Website</a>
           <p></p>
           <!-- SUMMARY -->
-          Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D
+          <em style="opacity: 0.625">Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D</em>
         </div>
       </div>
       <!-- TACVIS -->
-      <div class="paper-item" onmouseout="tacvis_stop()" onmouseover="tacvis_start()">
-        <div class="paper-image">
+      <div class="paper-item">
+        <div class="paper-image" onmouseout="tacvis_stop()" onmouseover="tacvis_start()">
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='tacvis_under'>
@@ -329,8 +395,6 @@
           <!-- AUTHORS -->
           <b>Justin Kerr</b>*, Huang Huang*, Albert Wilcox, Ryan Hoque, Jeffrey Ichnowski, Roberto Calandra, and Ken Goldberg
           <br>
-          *Equal contribution
-          <br>
           <!-- CONFERENCE -->
           <em>RSS</em> 2023
           <!-- LINKS -->
@@ -338,12 +402,12 @@
           <a href="https://arxiv.org/abs/2209.13042">arXiv</a> / <a href="https://sites.google.com/berkeley.edu/ssvtp">Website</a>
           <p></p>
           <!-- SUMMARY -->
-          We collect spatially paired vision and tactile inputs with a custom rig to train cross-modal representations. We then show these representations can be used for multiple active and passive perception tasks without fine-tuning.
+          <em style="opacity: 0.625">We collect spatially paired vision and tactile inputs with a custom rig to train cross-modal representations. We then show these representations can be used for multiple active and passive perception tasks without fine-tuning.</em>
         </div>
       </div>
       <!-- EVO-NERF -->
-      <div class="paper-item" onmouseout="evonerf_stop()" onmouseover="evonerf_start()">
-        <div class="paper-image">
+      <div class="paper-item">
+        <div class="paper-image" onmouseout="evonerf_stop()" onmouseover="evonerf_start()">
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='evonerf_under'>
@@ -386,13 +450,13 @@
           <a href="https://openreview.net/forum?id=Bxr45keYrf">OpenReview</a>
           <p></p>
           <!-- SUMMARY -->
-          NeRF functions as a real-time, updateable scene reconstruction for rapidly grasping table-top transparent objects.
-          Geometry regularization speeds and improves scene geometry, and a NeRF-adapted grasping network learns to ignore floaters.
+          <em style="opacity: 0.625">NeRF functions as a real-time, updateable scene reconstruction for rapidly grasping table-top transparent objects.
+          Geometry regularization speeds and improves scene geometry, and a NeRF-adapted grasping network learns to ignore floaters.</em>
         </div>
       </div>
       <!-- LUV -->
-      <div class="paper-item" onmouseout="luv_stop()" onmouseover="luv_start()">
-        <div class="paper-image">
+      <div class="paper-item">
+        <div class="paper-image" onmouseout="luv_stop()" onmouseover="luv_start()">
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='luv_splash'>
@@ -430,8 +494,6 @@
           <!-- AUTHORS -->
           Brijen Thananjeyan*, <b>Justin Kerr</b>*, Huang Huang, Joseph E. Gonzalez, Ken Goldberg
           <br>
-          * Equal contribution
-          <br>
           <!-- CONFERENCE -->
           <em>IROS</em> 2022
           <!-- LINKS -->
@@ -441,12 +503,12 @@
           <a href="https://arxiv.org/abs/2203.04566">arXiv</a>
           <p></p>
           <!-- SUMMARY -->
-          <p>Fluorescent paint enables inexpensive (<$300) and self-supervised data collection of dense image annotations without altering objects' appearance. </p>
+          <p><em style="opacity: 0.625">Fluorescent paint enables inexpensive (<$300) and self-supervised data collection of dense image annotations without altering objects' appearance.</em></p>
         </div>
       </div>
       <!-- SGTM -->
-      <div class="paper-item" onmouseout="sgtm_stop()" onmouseover="sgtm_start()">
-        <div class="paper-image">
+      <div class="paper-item">
+        <div class="paper-image" onmouseout="sgtm_stop()" onmouseover="sgtm_start()">
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='sgtm_splash'>
@@ -477,8 +539,6 @@
           <!-- AUTHORS -->
           Vainavi Viswanath*, Kaushik Shivakumar*, <b>Justin Kerr</b>*, Brijen Thananjeyan, Ellen Novoseller, Jeffrey Ichnowski, Alejandro Escontrela, Michael Laskey, Joseph E. Gonzalez, Ken Goldberg
           <br>
-          * Equal contribution
-          <br>
           <!-- CONFERENCE -->
           <em>RSS</em> 2022, <b>Best Systems Paper Award</b>
           <!-- LINKS -->
@@ -488,12 +548,12 @@
           <a href="http://www.roboticsproceedings.org/rss18/p034.pdf">Paper</a>
           <p></p>
           <!-- SUMMARY -->
-          <p>A sliding-pinching dual-mode gripper enables untangling charging cables with manipulation primitives to simplify perception coupled with learned perception modules.</p>
+          <p><em style="opacity: 0.625">A sliding-pinching dual-mode gripper enables untangling charging cables with manipulation primitives to simplify perception coupled with learned perception modules.</em></p>
         </div>
       </div>
       <!-- DEXNERF -->
-      <div class="paper-item" onmouseout="dexnerf_stop()" onmouseover="dexnerf_start()">
-        <div class="paper-image">
+      <div class="paper-item">
+        <div class="paper-image" onmouseout="dexnerf_stop()" onmouseover="dexnerf_start()">
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='dexnerf_splash'>
@@ -524,8 +584,6 @@
           <!-- AUTHORS -->
           Jeffrey Ichnowski*, Yahav Avigal*, <b>Justin Kerr</b>, Ken Goldberg
           <br>
-          * Equal contribution
-          <br>
           <!-- CONFERENCE -->
           <em>CoRL</em> 2021
           <!-- LINKS -->
@@ -535,12 +593,12 @@
           <a href="https://arxiv.org/abs/2110.14217">arXiv</a>
           <p></p>
           <!-- SUMMARY -->
-          <p>Using NeRF to reconstruct scenes with offline calibrated camera poses can produce graspable geometry even on reflective and transparent objects.</p>
+          <p><em style="opacity: 0.625">Using NeRF to reconstruct scenes with offline calibrated camera poses can produce graspable geometry even on reflective and transparent objects.</em></p>
         </div>
       </div>
       <!-- HOUSTON -->
-      <div class="paper-item" onmouseout="houston_stop()" onmouseover="houston_start()">
-        <div class="paper-image">
+      <div class="paper-item">
+        <div class="paper-image" onmouseout="houston_stop()" onmouseover="houston_start()">
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='houston_splash'>
@@ -571,8 +629,6 @@
           <!-- AUTHORS -->
           Albert Wilcox*,  <b>Justin Kerr</b>*, Brijen Thananjeyan, Jeff Ichnowski, Minho Hwang, Samuel Paradis, Danyal Fer, Ken Goldberg
           <br>
-          * Equal contribution
-          <br>
           <!-- CONFERENCE -->
           <em>ICRA</em> 2022 
           <!-- LINKS -->
@@ -582,7 +638,51 @@
           <a href="https://arxiv.org/abs/2112.04071">arXiv</a>
           <p></p>
           <!-- SUMMARY -->
-          <p>Combining active perception with behavior cloning can reliably hand a surgical needle back and forth between grippers.</p>
+          <p><em style="opacity: 0.625">Combining active perception with behavior cloning can reliably hand a surgical needle back and forth between grippers.</em></p>
+        </div>
+      </div>
+      
+      <!-- PRIMAL -->
+      <div class="paper-item">
+        <div class="paper-image" onmouseout="primal_stop()" onmouseover="primal_start()">
+          <!-- IMAGES -->
+          <div class="one">
+            <div class="two" id='primal_under'>
+              <img src="images/primal_under.png"/>
+            </div>
+            <img src='images/primal_splash.png' id="primal_splash">
+          </div>
+          <!-- SCRIPT FOR HOVERING -->
+          <script type="text/javascript">
+            function primal_start() {
+              document.getElementById('primal_splash').style.opacity = "0";
+              document.getElementById('primal_under').style.opacity = "1";
+            }
+
+            function primal_stop() {
+              document.getElementById('primal_splash').style.opacity = "1";
+              document.getElementById('primal_under').style.opacity = "0";
+            }
+            primal_stop()
+          </script>
+        </div>
+        <div class="paper-content">
+          <!-- TITLE -->
+          <a href="https://arxiv.org/abs/1809.03531">
+            <papertitle>PRIMAL: Pathfinding via Reinforcement and Imitation Multi-Agent Learning</papertitle>
+          </a>
+          <br>
+          <!-- AUTHORS -->
+          Guillaume Sartoretti, <b>Justin Kerr</b>, Yunfei Shi, Glenn Wagner, T. K. Satish Kumar, Sven Koenig, Howie Choset
+          <br>
+          <!-- CONFERENCE -->
+          <em>IEEE Robotics and Automation Letters</em> 2019
+          <!-- LINKS -->
+          <br>
+          <a href="https://arxiv.org/abs/1809.03531">arXiv</a>
+          <p></p>
+          <!-- SUMMARY -->
+          <em style="opacity: 0.625">A novel framework for multi-agent pathfinding that combines reinforcement and imitation learning to teach fully decentralized policies, validated with up to 1024 agents.</em>
         </div>
       </div>
           <!-- below is an example of doing the fancy mouseover thing -->
@@ -634,7 +734,7 @@ for Topologically Varying Neural Radiance Fields</papertitle>
     </div>
     
     <div class="projects-section">
-      <heading>Personal Projects</heading>
+      <heading>Other Projects</heading>
       
       <div class="project-item">
         <div class="project-images">
@@ -648,7 +748,7 @@ for Topologically Varying Neural Radiance Fields</papertitle>
       </div>
       
       <div class="project-item">
-        <div class="project-images">
+        <div class="project-images side-by-side">
           <a href="images/mapper_pic.jpeg"><img src="images/mapper_pic.jpeg" alt="mapping robot" height="182"></a>
           <a href="images/map_pic.png"><img src="images/map_pic.png" alt="map" height="182"></a>
         </div>
