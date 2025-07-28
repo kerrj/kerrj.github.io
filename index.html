@@ -32,10 +32,52 @@
         }
       };
     }
+
+    // Dark mode functionality
+    function initTheme() {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      updateToggleIcon(savedTheme);
+    }
+
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      updateToggleIcon(newTheme);
+    }
+
+    function updateToggleIcon(theme) {
+      const toggle = document.querySelector('.dark-mode-toggle');
+      if (toggle) {
+        toggle.innerHTML = theme === 'dark' ? '☀️' : '🌙';
+      }
+    }
+
+    // Initialize animations on load
+    function initAnimations() {
+      const elements = document.querySelectorAll('.paper-item, .project-item');
+      elements.forEach((el, index) => {
+        el.classList.add('fade-in', `stagger-${Math.min(index + 1, 5)}`);
+      });
+    }
+
+    // Initialize everything when DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+      initTheme();
+      initAnimations();
+    });
   </script>
 </head>
 
 <body>
+  <nav class="nav-menu">
+    <a href="#papers" class="nav-link">Papers</a>
+    <a href="#projects" class="nav-link">Projects</a>
+  </nav>
+  <button class="dark-mode-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
   <div class="container">
     <div class="profile-section">
       <div class="profile-text">
@@ -60,7 +102,7 @@
         <a href="images/justin_pic.jpg"><img alt="profile photo" src="images/justin_pic.jpg" class="hoverZoomLink"></a>
       </div>
     </div>
-    <div class="papers-section">
+    <div class="papers-section" id="papers">
       <heading>Papers</heading>
       <!-- EyeRobot -->
       <div class="paper-item">
@@ -96,11 +138,9 @@
           <b>Justin Kerr</b>, Kush Hari, Ethan Weber, Chung Min Kim, Brent Yi, Tyler Bonnen, Ken Goldberg, Angjoo Kanazawa
           <br>
           <!-- CONFERENCE -->
-          <em>arXiv</em> 2025
-          <!-- LINKS -->
+          arXiv <em>2025</em>
           <br>
           <a href="https://www.eyerobot.net/data/EyeRobot-final.pdf">arXiv</a>
-          /
           <a href="https://www.eyerobot.net">Website</a>
           <p></p>
           <!-- SUMMARY -->
@@ -127,11 +167,9 @@
           Mingxuan Wu*, Huang Huang*, <b>Justin Kerr</b>, Chung Min Kim, Anthony Zhang, Brent Yi, Angjoo Kanazawa
           <br>
           <!-- CONFERENCE -->
-          <em>ICCV</em> 2025
-          <!-- LINKS -->
+          ICCV <em>2025</em>
           <br>
           <a href="https://arxiv.org/abs/2504.17441">arXiv</a>
-          /
           <a href="https://predict-optimize-distill.github.io/pod.github.io">Website</a>
           <p></p>
           <!-- SUMMARY -->
@@ -167,8 +205,7 @@
           Justin Yu*, Kush Hari*, Karim El-Refai*, Arnav Dalal, <b>Justin Kerr</b>, Chung Min Kim, Richard Cheng, Muhammad Zubair Irshad, Ken Goldberg
           <br>
           <!-- CONFERENCE -->
-          <em>ICRA</em> 2025
-          <!-- LINKS -->
+          ICRA <em>2025</em>
           <br>
           <a href="https://arxiv.org/abs/2503.05189">arXiv</a>
           <p></p>
@@ -211,11 +248,10 @@
           <b>Justin Kerr</b>*, Chung Min Kim*, Mingxuan Wu, Brent Yi, Qianqian Wang, Ken Goldberg, Angjoo Kanazawa
           <br>
           <!-- CONFERENCE -->
-          <em>CoRL</em> 2024 <b>Oral</b>
+          CoRL <b>Oral</b> <em>2024</em>
           <!-- LINKS -->
           <br>
           <a href="https://arxiv.org/abs/2409.18121">arXiv</a>
-          /
           <a href="https://robot-see-robot-do.github.io/">Website</a>
           <p></p>
           <!-- SUMMARY -->
@@ -253,10 +289,10 @@
           Chung Min Kim*, Mingxuan Wu*, <b>Justin Kerr</b>*, Ken Goldberg, Matthew Tancik, Angjoo Kanazawa
           <br>
           <!-- CONFERENCE -->
-          <em>CVPR</em> 2024
+          CVPR <em>2024</em>
           <!-- LINKS -->
           <br>
-          <a href="https://arxiv.org/abs/2401.09419">arXiv</a> / <a href="https://www.garfield.studio/">Website</a>
+          <a href="https://arxiv.org/abs/2401.09419">arXiv</a> <a href="https://www.garfield.studio/">Website</a>
           <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">Hierarchical grouping in 3D by training a scale-conditioned affinity field from multi-level masks</em>
@@ -294,10 +330,10 @@
           Adam Rashid*, Satvik Sharma*, Chung Min Kim, <b>Justin Kerr</b>, Lawrence Yunliang Chen, Angjoo Kanazawa, Ken Goldberg
           <br>
           <!-- CONFERENCE -->
-          <em>CoRL</em> 2023 <b>Oral, Best Paper Finalist</b>
+          CoRL <b>Oral, Best Paper Finalist</b> <em>2023</em>
           <!-- LINKS -->
           <br>
-          <a href="https://arxiv.org/abs/2309.07970">arXiv</a> / <a href="https://lerftogo.github.io/">Website</a>
+          <a href="https://arxiv.org/abs/2309.07970">arXiv</a> <a href="https://lerftogo.github.io/">Website</a>
           <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">LERF's multi-scale semantics enables 0-shot language-conditioned part grasping for a wide variety of objects.</em>
@@ -332,10 +368,10 @@
           <b>Justin Kerr</b>*, Chung Min Kim*, Ken Goldberg, Angjoo Kanazawa, Matthew Tancik
           <br>
           <!-- CONFERENCE -->
-          <em>ICCV</em> 2023 <b>Oral</b>
+          ICCV <b>Oral</b> <em>2023</em>
           <!-- LINKS -->
           <br>
-          <a href="https://arxiv.org/abs/2303.09553">arXiv</a> / <a href="https://lerf.io">Website</a>
+          <a href="https://arxiv.org/abs/2303.09553">arXiv</a> <a href="https://lerf.io">Website</a>
           <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D</em>
@@ -367,10 +403,10 @@
           <b>Justin Kerr</b>*, Huang Huang*, Albert Wilcox, Ryan Hoque, Jeffrey Ichnowski, Roberto Calandra, and Ken Goldberg
           <br>
           <!-- CONFERENCE -->
-          <em>RSS</em> 2023
+          RSS <em>2023</em>
           <!-- LINKS -->
           <br>
-          <a href="https://arxiv.org/abs/2209.13042">arXiv</a> / <a href="https://sites.google.com/berkeley.edu/ssvtp">Website</a>
+          <a href="https://arxiv.org/abs/2209.13042">arXiv</a> <a href="https://sites.google.com/berkeley.edu/ssvtp">Website</a>
           <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">We collect spatially paired vision and tactile inputs with a custom rig to train cross-modal representations. We then show these representations can be used for multiple active and passive perception tasks without fine-tuning.</em>
@@ -407,11 +443,10 @@
           <b>Justin Kerr</b>, Letian Fu, Huang Huang, Yahav Avigal, Matthew Tancik, Jeffrey Ichnowski, Angjoo Kanazawa, Ken Goldberg
           <br>
           <!-- CONFERENCE -->
-          <em>CoRL</em> 2022, <b>Oral Presentation</b>
+          CoRL <b>Oral</b> <em>2022</em>
           <!-- LINKS -->
           <br>
           <a href="https://sites.google.com/view/evo-nerf">Website</a>
-          /
           <a href="https://openreview.net/forum?id=Bxr45keYrf">OpenReview</a>
           <p></p>
           <!-- SUMMARY -->
@@ -453,11 +488,10 @@
           Brijen Thananjeyan*, <b>Justin Kerr</b>*, Huang Huang, Joseph E. Gonzalez, Ken Goldberg
           <br>
           <!-- CONFERENCE -->
-          <em>IROS</em> 2022
+          IROS <em>2022</em>
           <!-- LINKS -->
           <br>
           <a href="https://sites.google.com/berkeley.edu/luv">Website</a>
-          /
           <a href="https://arxiv.org/abs/2203.04566">arXiv</a>
           <p></p>
           <!-- SUMMARY -->
@@ -492,11 +526,10 @@
           Vainavi Viswanath*, Kaushik Shivakumar*, <b>Justin Kerr</b>*, Brijen Thananjeyan, Ellen Novoseller, Jeffrey Ichnowski, Alejandro Escontrela, Michael Laskey, Joseph E. Gonzalez, Ken Goldberg
           <br>
           <!-- CONFERENCE -->
-          <em>RSS</em> 2022, <b>Best Systems Paper Award</b>
+          RSS <b>Best Systems Paper Award</b> <em>2022</em>
           <!-- LINKS -->
           <br>
           <a href="https://sites.google.com/view/rss-2022-untangling/home">Website</a>
-          /
           <a href="http://www.roboticsproceedings.org/rss18/p034.pdf">Paper</a>
           <p></p>
           <!-- SUMMARY -->
@@ -531,11 +564,10 @@
           Jeffrey Ichnowski*, Yahav Avigal*, <b>Justin Kerr</b>, Ken Goldberg
           <br>
           <!-- CONFERENCE -->
-          <em>CoRL</em> 2021
+          CoRL <em>2021</em>
           <!-- LINKS -->
           <br>
           <a href="https://sites.google.com/view/dex-nerf">Website</a>
-          /
           <a href="https://arxiv.org/abs/2110.14217">arXiv</a>
           <p></p>
           <!-- SUMMARY -->
@@ -550,7 +582,7 @@
             <div class="two" id='houston_splash'>
               <img src="images/houston_splash.png"/>
             </div>
-            <img src='images/houston_flow.png' id="houston_under">
+            <img src='images/houston_under.png' id="houston_under">
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
@@ -570,11 +602,10 @@
           Albert Wilcox*,  <b>Justin Kerr</b>*, Brijen Thananjeyan, Jeff Ichnowski, Minho Hwang, Samuel Paradis, Danyal Fer, Ken Goldberg
           <br>
           <!-- CONFERENCE -->
-          <em>ICRA</em> 2022 
+          ICRA <em>2022</em> 
           <!-- LINKS -->
           <br>
           <a href="https://sites.google.com/berkeley.edu/autolab-houston">Website</a>
-          /
           <a href="https://arxiv.org/abs/2112.04071">arXiv</a>
           <p></p>
           <!-- SUMMARY -->
@@ -610,7 +641,7 @@
           Guillaume Sartoretti, <b>Justin Kerr</b>, Yunfei Shi, Glenn Wagner, T. K. Satish Kumar, Sven Koenig, Howie Choset
           <br>
           <!-- CONFERENCE -->
-          <em>IEEE Robotics and Automation Letters</em> 2019
+          IEEE Robotics and Automation Letters <em>2019</em>
           <!-- LINKS -->
           <br>
           <a href="https://arxiv.org/abs/1809.03531">arXiv</a>
@@ -622,7 +653,7 @@
 
     </div>
     
-    <div class="projects-section">
+    <div class="projects-section" id="projects">
       <heading>Robot Systems Projects</heading>
       <p><em>The result of lots of COVID boredom, I designed, built, and programmed these (mostly) from scratch</em></p>
       
@@ -651,7 +682,7 @@
     
     <div class="footer">
       <p>
-        Source code started from <a href="https://jonbarron.info/">Jon Barron's site</a> and mostly edited by Claude
+        Source code started from <a href="https://jonbarron.info/">Jon Barron's site</a> and completely vibe-redone with Claude
       </p>
     </div>
   </div>
