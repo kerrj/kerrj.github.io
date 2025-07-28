@@ -54,6 +54,16 @@
       if (toggle) {
         toggle.innerHTML = theme === 'dark' ? '☀️' : '🌙';
       }
+      
+      // Update theme-specific images
+      const themeImages = document.querySelectorAll('.theme-image');
+      themeImages.forEach(img => {
+        const lightSrc = img.getAttribute('data-light-src');
+        const darkSrc = img.getAttribute('data-dark-src');
+        if (lightSrc && darkSrc) {
+          img.src = theme === 'dark' ? darkSrc : lightSrc;
+        }
+      });
     }
 
     // Initialize animations on load
@@ -361,6 +371,45 @@
           <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">LERF's multi-scale semantics enables 0-shot language-conditioned part grasping for a wide variety of objects.</em>
+        </div>
+      </div>
+      
+      <!-- Nerfstudio -->
+      <div class="paper-item">
+        <div class="paper-image" onmouseout="nerfstudio_stop()" onmouseover="nerfstudio_start()">
+          <!-- IMAGES -->
+          <div class="one">
+            <div class="two" id='nerfstudio_under'>
+              <img src="images/ns_under.gif"/>
+            </div>
+            <img src='images/ns_splash_light.png' id="nerfstudio_splash" class="theme-image" data-light-src="images/ns_splash_light.png" data-dark-src="images/ns_splash_dark.png">
+          </div>
+          <!-- SCRIPT FOR HOVERING -->
+          <script type="text/javascript">
+            const nerfstudio = setupPaperHover('nerfstudio');
+            const nerfstudio_start = nerfstudio.start;
+            const nerfstudio_stop = nerfstudio.stop;
+            nerfstudio_stop();
+          </script>
+        </div>
+        <div class="paper-content">
+          <!-- TITLE -->
+          <a href="https://nerf.studio">
+            <papertitle>Nerfstudio: A Modular Framework for Neural Radiance Field Development</papertitle>
+          </a>
+          <br>
+          <!-- AUTHORS -->
+          Matthew Tancik, Ethan Weber, Evonne Ng, Ruilong Li, Brent Yi, <b>Justin Kerr</b>, Terrance Wang, Alexander Kristoffersen, Jake Austin, Kamyar Salahi, Abhik Ahuja, David McAllister, Angjoo Kanazawa
+          <br>
+          <!-- CONFERENCE -->
+          SIGGRAPH <em>2023</em>
+          <br>
+          <a href="https://arxiv.org/abs/2302.04264">arXiv</a>
+          <a href="https://nerf.studio">Website</a>
+          <a href="https://github.com/nerfstudio-project/nerfstudio/">GitHub</a>
+          <p></p>
+          <!-- SUMMARY -->
+          <em style="opacity: 0.625">A modular PyTorch framework for Neural Radiance Fields research with plug-and-play components and real-time visualization tools.</em>
         </div>
       </div>
       <!-- LERF -->
