@@ -64,19 +64,43 @@
       });
     }
 
+    // Detect touch devices and disable hover effects
+    function isTouchDevice() {
+      return (('ontouchstart' in window) ||
+              (navigator.maxTouchPoints > 0) ||
+              (navigator.msMaxTouchPoints > 0));
+    }
+
+    function disableHoverOnTouch() {
+      if (isTouchDevice()) {
+        // Remove hover event listeners on touch devices
+        const paperImages = document.querySelectorAll('.paper-image[onmouseout][onmouseover]');
+        paperImages.forEach(function(element) {
+          element.removeAttribute('onmouseout');
+          element.removeAttribute('onmouseover');
+          // Ensure the splash image is always visible on touch devices
+          const splashElements = element.querySelectorAll('[id$="_splash"]');
+          const underElements = element.querySelectorAll('[id$="_under"]');
+          splashElements.forEach(function(splash) {
+            splash.style.opacity = "1";
+          });
+          underElements.forEach(function(under) {
+            under.style.opacity = "0";
+          });
+        });
+      }
+    }
+
     // Initialize everything when DOM is ready
     document.addEventListener('DOMContentLoaded', function() {
       initTheme();
       initAnimations();
+      disableHoverOnTouch();
     });
   </script>
 </head>
 
 <body>
-  <nav class="nav-menu">
-    <a href="#papers" class="nav-link">Papers</a>
-    <a href="#projects" class="nav-link">Projects</a>
-  </nav>
   <button class="dark-mode-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
   <div class="container">
     <div class="profile-section">
@@ -85,11 +109,11 @@
           <name>Justin Kerr</name>
         </p>
         <p>
-          I'm a 4th year PhD at Berkeley's AI Research Lab co-advised by Angjoo Kanazawa and Ken Goldberg. I'm interested in advancing robot perception towards real-world manipulation, including 3D multi-modal understanding, 4D reconstruction, tactile sensing, and active vision.
-           I'm also a maintainer of <a href="https://github.com/nerfstudio-project/nerfstudio">Nerfstudio</a>, a large open-source repo for 3D neural reconstruction. My work is supported by the NSF GRFP.
+          I'm a 4th year PhD at Berkeley's AI Research Lab, co-advised by Angjoo Kanazawa and Ken Goldberg. My research focuses on advancing robot perception for real-world manipulation through 3D multi-modal understanding, 4D reconstruction, tactile sensing, and active vision.
+           I also maintain <a href="https://github.com/nerfstudio-project/nerfstudio">Nerfstudio</a>, a large open-source repo for 3D neural reconstruction, and my work is supported by the NSF GRFP.
         </p>
         <p>
-          Previously I finished my bachelor's at CMU where I worked with Howie Choset on multi-robot path planning, and spent time at Berkshire Grey and NASA JPL, where I was lucky to be involved in early work on a <a href="https://www.jpl.nasa.gov/missions/cadre/">moon rover tech demo</a>.
+          Before Berkeley, I did my undergrad at CMU where I worked with Howie Choset on multi-robot path planning. I also spent time at Berkshire Grey on warehouse bin-packing automation and NASA JPL, where I was lucky to be involved in early work on a <a href="https://www.jpl.nasa.gov/missions/cadre/">moon rover tech demo</a>.
         </p>
         <p style="text-align:center">
           <a href="mailto:justin_kerr@berkeley.edu">Email</a> &nbsp/&nbsp
@@ -110,12 +134,12 @@
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='eyerobot_under'>
-              <video  muted autoplay loop>
+              <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
                 <source src="images/eyerobot_under_600p.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
-            <video  muted autoplay loop id="eyerobot_splash">
+            <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="eyerobot_splash">
               <source src="images/eyerobot_splash.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -220,12 +244,12 @@
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='robotsee_under'>
-              <video  muted autoplay loop>
+              <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
                 <source src="images/robotsee_under.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
-            <video  muted autoplay loop id="robotsee_splash">
+            <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="robotsee_splash">
               <source src="images/robotsee_splash_720p.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -267,7 +291,7 @@
             <div class="two" id='garfield_under' >
               <img src="images/garfield_under.jpg"/>
             </div>
-            <video  muted autoplay loop id="garfield_splash">
+            <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="garfield_splash">
               <source src="images/garfield_splash_720p.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -308,7 +332,7 @@
             <div class="two" id='lerftogo_under'>
               <img src="images/lerftogo_under.jpg"/>
             </div>
-            <video  muted autoplay loop id="lerftogo_splash">
+            <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="lerftogo_splash">
               <source src="images/lerftogo_splash.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -347,7 +371,7 @@
             <div class="two" id='lerf_under'>
               <img src="images/lerf_under.svg"/>
             </div>
-            <video  muted autoplay loop id="lerf_splash">
+            <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="lerf_splash">
               <source src="images/lerf_splash.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -420,7 +444,7 @@
             <div class="two" id='evonerf_under'>
               <img src="images/evonerf_early_stop.png"/>
             </div>
-            <video  muted autoplay loop id="evonerf_splash">
+            <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="evonerf_splash">
               <source src="images/evonerf_splash_720p.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -460,12 +484,12 @@
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='luv_splash'>
-              <video  muted autoplay loop>
+              <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
                 <source src="images/luv_splash.mp4" type="video/mp4">
                 Your browser does not support the video tag.
                 </video>
             </div>
-            <video  muted autoplay loop id="luv_under">
+            <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="luv_under">
               <source src="images/luv_smoothing_720p.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
