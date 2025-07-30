@@ -98,7 +98,7 @@ strong {
   font-weight: 700;
 }
 
-heading {
+h2 {
   font-family: inherit;
   font-size: 32px;
   font-weight: 600;
@@ -108,7 +108,7 @@ heading {
   position: relative;
 }
 
-heading::after {
+h2::after {
   content: '';
   position: absolute;
   bottom: -8px;
@@ -119,7 +119,7 @@ heading::after {
   border-radius: 2px;
 }
 
-papertitle {
+h3 {
   font-family: inherit;
   font-size: 18px;
   font-weight: 600;
@@ -127,7 +127,7 @@ papertitle {
   line-height: 1.4;
 }
 
-name {
+h1 {
   font-family: inherit;
   font-size: 48px;
   font-weight: 700;
@@ -563,15 +563,15 @@ td {
     min-width: auto;
   }
   
-  name {
+  h1 {
     font-size: 36px;
   }
   
-  heading {
+  h2 {
     font-size: 28px;
   }
   
-  papertitle {
+  h3 {
     font-size: 17px;
   }
 }
@@ -740,11 +740,11 @@ td {
     max-width: 280px;
   }
   
-  name {
+  h1 {
     font-size: 32px;
   }
   
-  heading {
+  h2 {
     font-size: 24px;
   }
   

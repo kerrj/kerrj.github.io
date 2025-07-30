@@ -13,12 +13,68 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <title>Justin Kerr</title>
+  <meta name="description" content="Justin Kerr - PhD student at Berkeley AI Research Lab working on robot perception, 3D multi-modal understanding, 4D reconstruction, tactile sensing, and active vision. Maintainer of Nerfstudio.">
+  <meta name="keywords" content="computer vision, robotics, machine learning, neural radiance fields, NeRF, 4D reconstruction, robot perception, tactile sensing, active vision, Berkeley AI Research, Nerfstudio">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kerrj.github.io/">
+  <meta property="og:title" content="Justin Kerr - Robotics & Computer Vision Researcher">
+  <meta property="og:description" content="PhD student at Berkeley AI Research Lab working on robot perception, 3D multi-modal understanding, 4D reconstruction, tactile sensing, and active vision. Maintainer of Nerfstudio.">
+  <meta property="og:image" content="https://kerrj.github.io/images/justin_pic.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://kerrj.github.io/">
+  <meta property="twitter:title" content="Justin Kerr - Robotics & Computer Vision Researcher">
+  <meta property="twitter:description" content="PhD student at Berkeley AI Research Lab working on robot perception, 3D multi-modal understanding, 4D reconstruction, tactile sensing, and active vision. Maintainer of Nerfstudio.">
+  <meta property="twitter:image" content="https://kerrj.github.io/images/justin_pic.jpg">
+  <meta property="twitter:creator" content="@justkerrding">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://kerrj.github.io/">
   
   <meta name="author" content="Justin Kerr">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/seal_icon.png">
+  
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Justin Kerr",
+    "jobTitle": "PhD Student",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "UC Berkeley AI Research Lab"
+    },
+    "alumniOf": {
+      "@type": "Organization",
+      "name": "University of California, Berkeley"
+    },
+    "knowsAbout": [
+      "Computer Vision",
+      "Robotics", 
+      "Machine Learning",
+      "Neural Radiance Fields",
+      "4D Reconstruction",
+      "Robot Perception",
+      "Tactile Sensing",
+      "Active Vision"
+    ],
+    "url": "https://kerrj.github.io",
+    "image": "https://kerrj.github.io/images/justin_pic.jpg",
+    "sameAs": [
+      "https://twitter.com/justkerrding",
+      "https://github.com/kerrj/",
+      "https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID"
+    ],
+    "email": "justin_kerr@berkeley.edu"
+  }
+  </script>
   <script type="text/javascript">
     function setupPaperHover(paperName) {
       return {
@@ -112,11 +168,11 @@
 
 <body>
   <button class="dark-mode-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
-  <div class="container">
-    <div class="profile-section">
+  <main class="container">
+    <header class="profile-section">
       <div class="profile-text">
         <p style="text-align:left">
-          <name>Justin Kerr</name>
+          <h1>Justin Kerr</h1>
         </p>
         <p>
           I'm a 4th year PhD at Berkeley's AI Research Lab, co-advised by Angjoo Kanazawa and Ken Goldberg. My research focuses on advancing robot perception for real-world manipulation through 3D multi-modal understanding, 4D reconstruction, tactile sensing, and active vision.
@@ -133,23 +189,23 @@
         </p>
       </div>
       <div class="profile-image">
-        <a href="images/justin_pic.jpg"><img alt="profile photo" src="images/justin_pic.jpg" class="hoverZoomLink"></a>
+        <a href="images/justin_pic.jpg"><img alt="Justin Kerr profile photo - PhD student at Berkeley AI Research Lab" src="images/justin_pic.jpg" class="hoverZoomLink"></a>
       </div>
-    </div>
-    <div class="papers-section" id="papers">
-      <heading>Papers</heading>
+    </header>
+    <section class="papers-section" id="papers" aria-labelledby="papers-heading">
+      <h2 id="papers-heading">Papers</h2>
       <!-- EyeRobot -->
       <div class="paper-item">
         <div class="paper-image" onmouseout="eyerobot_stop()" onmouseover="eyerobot_start()">
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='eyerobot_under'>
-              <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
+              <video muted autoplay loop playsinline loading="lazy" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
                 <source src="images/eyerobot_under_600p.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
-            <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="eyerobot_splash">
+            <video muted autoplay loop playsinline loading="lazy" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="eyerobot_splash">
               <source src="images/eyerobot_splash.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -165,7 +221,7 @@
         <div class="paper-content">
           <!-- TITLE -->
           <a href="https://www.eyerobot.net">
-            <papertitle>Eye, Robot: Learning to Look to Act with a BC-RL Perception-Action Loop</papertitle>
+            <h3>Eye, Robot: Learning to Look to Act with a BC-RL Perception-Action Loop</h3>
           </a>
           <br>
           <!-- AUTHORS -->
@@ -175,6 +231,7 @@
           arXiv <em>2025</em>
           <br>
           <a href="https://www.eyerobot.net/data/EyeRobot-final.pdf">arXiv</a>
+          &nbsp/&nbsp
           <a href="https://www.eyerobot.net">Website</a>
           <p></p>
           <!-- SUMMARY -->
@@ -188,13 +245,13 @@
         <div class="paper-image">
           <!-- IMAGES -->
           <div class="one">
-            <img src='images/pod_splash.png'>
+            <img loading="lazy" src='images/pod_splash.png'>
           </div>
         </div>
         <div class="paper-content">
           <!-- TITLE -->
           <a href="https://predict-optimize-distill.github.io/pod.github.io">
-            <papertitle>Predict-Optimize-Distill: A Self-Improving Cycle for 4D Object Understanding</papertitle>
+            <h3>Predict-Optimize-Distill: A Self-Improving Cycle for 4D Object Understanding</h3>
           </a>
           <br>
           <!-- AUTHORS -->
@@ -217,9 +274,9 @@
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='pogs_under'>
-              <img src="images/pogs_under.png"/>
+              <img loading="lazy" src="images/pogs_under.png"/>
             </div>
-            <img src='images/pogs_splash.png' id="pogs_splash">
+            <img loading="lazy" src='images/pogs_splash.png' id="pogs_splash">
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
@@ -232,7 +289,7 @@
         <div class="paper-content">
           <!-- TITLE -->
           <a href="https://arxiv.org/abs/2503.05189">
-            <papertitle>Persistent Object Gaussian Splat (POGS) for Tracking Human and Robot Manipulation of Irregularly Shaped Objects</papertitle>
+            <h3>Persistent Object Gaussian Splat (POGS) for Tracking Human and Robot Manipulation of Irregularly Shaped Objects</h3>
           </a>
           <br>
           <!-- AUTHORS -->
@@ -254,12 +311,12 @@
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='robotsee_under'>
-              <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
+              <video muted autoplay loop playsinline loading="lazy" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
                 <source src="images/robotsee_under.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
-            <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="robotsee_splash">
+            <video muted autoplay loop playsinline loading="lazy" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="robotsee_splash">
               <source src="images/robotsee_splash_720p.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -275,7 +332,7 @@
         <div class="paper-content">
           <!-- TITLE -->
           <a href="https://robot-see-robot-do.github.io/">
-            <papertitle>Robot See Robot Do: Imitating Articulated Object Manipulation with Monocular 4D Reconstruction</papertitle>
+            <h3>Robot See Robot Do: Imitating Articulated Object Manipulation with Monocular 4D Reconstruction</h3>
           </a>
           <br>
           <!-- AUTHORS -->
@@ -299,9 +356,9 @@
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='garfield_under' >
-              <img src="images/garfield_under.jpg"/>
+              <img loading="lazy" src="images/garfield_under.jpg"/>
             </div>
-            <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="garfield_splash">
+            <video muted autoplay loop playsinline loading="lazy" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="garfield_splash">
               <source src="images/garfield_splash_720p.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -316,8 +373,8 @@
         </div>
         <div class="paper-content">
           <!-- TITLE -->
-          <a href="https://www.garfield.studio/"><papertitle>GARField: Group Anything with Radiance Fields
-          </papertitle></a>
+          <a href="https://www.garfield.studio/"><h3>GARField: Group Anything with Radiance Fields
+          </h3></a>
           <br>
           <!-- AUTHORS -->
           Chung Min Kim*, Mingxuan Wu*, <b>Justin Kerr</b>*, Ken Goldberg, Matthew Tancik, Angjoo Kanazawa
@@ -340,9 +397,9 @@
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='lerftogo_under'>
-              <img src="images/lerftogo_under.jpg"/>
+              <img loading="lazy" src="images/lerftogo_under.jpg"/>
             </div>
-            <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="lerftogo_splash">
+            <video muted autoplay loop playsinline loading="lazy" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="lerftogo_splash">
               <source src="images/lerftogo_splash.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -357,8 +414,8 @@
         </div>
         <div class="paper-content">
           <!-- TITLE -->
-          <a href="https://lerftogo.github.io"><papertitle>LERF-TOGO: Language Embedded Radiance Fields for Zero-Shot Task-Oriented Grasping
-          </papertitle></a>
+          <a href="https://lerftogo.github.io"><h3>LERF-TOGO: Language Embedded Radiance Fields for Zero-Shot Task-Oriented Grasping
+          </h3></a>
           <br>
           <!-- AUTHORS -->
           Adam Rashid*, Satvik Sharma*, Chung Min Kim, <b>Justin Kerr</b>, Lawrence Yunliang Chen, Angjoo Kanazawa, Ken Goldberg
@@ -380,9 +437,9 @@
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='nerfstudio_under'>
-              <img src="images/ns_under.gif"/>
+              <img loading="lazy" src="images/ns_under.gif"/>
             </div>
-            <img src='images/ns_splash_light.png' id="nerfstudio_splash" class="theme-image" data-light-src="images/ns_splash_light.png" data-dark-src="images/ns_splash_dark.png">
+            <img loading="lazy" src='images/ns_splash_light.png' id="nerfstudio_splash" class="theme-image" data-light-src="images/ns_splash_light.png" data-dark-src="images/ns_splash_dark.png">
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
@@ -395,7 +452,7 @@
         <div class="paper-content">
           <!-- TITLE -->
           <a href="https://nerf.studio">
-            <papertitle>Nerfstudio: A Modular Framework for Neural Radiance Field Development</papertitle>
+            <h3>Nerfstudio: A Modular Framework for Neural Radiance Field Development</h3>
           </a>
           <br>
           <!-- AUTHORS -->
@@ -418,9 +475,9 @@
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='lerf_under'>
-              <img src="images/lerf_under.svg"/>
+              <img loading="lazy" src="images/lerf_under.svg"/>
             </div>
-            <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="lerf_splash">
+            <video muted autoplay loop playsinline loading="lazy" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="lerf_splash">
               <source src="images/lerf_splash.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -435,7 +492,7 @@
         </div>
         <div class="paper-content">
           <!-- TITLE -->
-          <a href="https://lerf.io"><papertitle>LERF: Language Embedded Radiance Fields</papertitle></a>
+          <a href="https://lerf.io"><h3>LERF: Language Embedded Radiance Fields</h3></a>
           <br>
           <!-- AUTHORS -->
           <b>Justin Kerr</b>*, Chung Min Kim*, Ken Goldberg, Angjoo Kanazawa, Matthew Tancik
@@ -456,9 +513,9 @@
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='tacvis_under'>
-              <img src="images/tacvis_under.png"/>
+              <img loading="lazy" src="images/tacvis_under.png"/>
             </div>
-            <img src="images/tacvis_splash.png" id='tacvis_splash'/>
+            <img loading="lazy" src="images/tacvis_splash.png" id='tacvis_splash'/>
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
@@ -470,7 +527,7 @@
         </div>
         <div class="paper-content">
           <!-- TITLE -->
-          <a href="https://arxiv.org/abs/2209.13042"><papertitle>Self-Supervised Visuo-Tactile Pretraining to Locate and Follow Garment Features</papertitle></a>
+          <a href="https://arxiv.org/abs/2209.13042"><h3>Self-Supervised Visuo-Tactile Pretraining to Locate and Follow Garment Features</h3></a>
           <br>
           <!-- AUTHORS -->
           <b>Justin Kerr</b>*, Huang Huang*, Albert Wilcox, Ryan Hoque, Jeffrey Ichnowski, Roberto Calandra, and Ken Goldberg
@@ -491,9 +548,9 @@
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='evonerf_under'>
-              <img src="images/evonerf_early_stop.png"/>
+              <img loading="lazy" src="images/evonerf_early_stop.png"/>
             </div>
-            <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="evonerf_splash">
+            <video muted autoplay loop playsinline loading="lazy" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="evonerf_splash">
               <source src="images/evonerf_splash_720p.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -509,7 +566,7 @@
         <div class="paper-content">
           <!-- TITLE -->
           <a href="https://sites.google.com/view/evo-nerf">
-            <papertitle>Evo-NeRF: Evolving NeRF for Sequential Robot Grasping</papertitle>
+            <h3>Evo-NeRF: Evolving NeRF for Sequential Robot Grasping</h3>
           </a>
           <br>
           <!-- AUTHORS -->
@@ -532,13 +589,13 @@
         <div class="paper-image" onmouseout="luv_stop()" onmouseover="luv_start()">
           <!-- IMAGES -->
           <div class="one">
-            <div class="two" id='luv_splash'>
-              <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
+            <div class="two" id='luv_under'>
+              <video muted autoplay loop playsinline loading="lazy" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback">
                 <source src="images/luv_splash.mp4" type="video/mp4">
                 Your browser does not support the video tag.
                 </video>
             </div>
-            <video muted autoplay loop playsinline disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="luv_under">
+            <video muted autoplay loop playsinline loading="lazy" disablepictureinpicture controlslist="nodownload nofullscreen noremoteplayback" id="luv_splash">
               <source src="images/luv_smoothing_720p.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -554,7 +611,7 @@
         <div class="paper-content">
           <!-- TITLE -->
           <a href="https://sites.google.com/berkeley.edu/luv">
-            <papertitle>All You Need is LUV: Unsupervised Collection of Labeled Images using Invisible UV Fluorescent Indicators</papertitle>
+            <h3>All You Need is LUV: Unsupervised Collection of Labeled Images using Invisible UV Fluorescent Indicators</h3>
           </a>
           <br>
           <!-- AUTHORS -->
@@ -576,10 +633,10 @@
         <div class="paper-image" onmouseout="sgtm_stop()" onmouseover="sgtm_start()">
           <!-- IMAGES -->
           <div class="one">
-            <div class="two" id='sgtm_splash'>
-              <img src="images/sgtm_splash.png"/>
+            <div class="two" id='sgtm_under'>
+              <img loading="lazy" src="images/sgtm_splash.png"/>
             </div>
-            <img src='images/sgtm_under.png' id="sgtm_under">
+            <img loading="lazy" src='images/sgtm_under.png' id="sgtm_splash">
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
@@ -592,7 +649,7 @@
         <div class="paper-content">
           <!-- TITLE -->
           <a href="https://sites.google.com/view/rss-2022-untangling/home">
-            <papertitle>Autonomously Untangling Long Cables</papertitle>
+            <h3>Autonomously Untangling Long Cables</h3>
           </a>
           <br>
           <!-- AUTHORS -->
@@ -615,9 +672,9 @@
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='dexnerf_splash'>
-              <img src="images/dexnerf_splash.png"/>
+              <img loading="lazy" src="images/dexnerf_splash.png"/>
             </div>
-            <img src='images/dexnerf_under.jpeg' id="dexnerf_under">
+            <img loading="lazy" src='images/dexnerf_under.jpeg' id="dexnerf_under">
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
@@ -630,7 +687,7 @@
         <div class="paper-content">
           <!-- TITLE -->
           <a href="https://sites.google.com/view/dex-nerf">
-            <papertitle>Dex-NeRF: Using a Neural Radiance Field to Grasp Transparent Objects</papertitle>
+            <h3>Dex-NeRF: Using a Neural Radiance Field to Grasp Transparent Objects</h3>
           </a>
           <br>
           <!-- AUTHORS -->
@@ -653,9 +710,9 @@
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='houston_splash'>
-              <img src="images/houston_splash.png"/>
+              <img loading="lazy" src="images/houston_splash.png"/>
             </div>
-            <img src='images/houston_under.png' id="houston_under">
+            <img loading="lazy" src='images/houston_under.png' id="houston_under">
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
@@ -668,7 +725,7 @@
         <div class="paper-content">
           <!-- TITLE -->
           <a href="https://sites.google.com/berkeley.edu/autolab-houston">
-            <papertitle>Learning to Localize, Grasp, and Hand Over Unmodified Surgical Needles</papertitle>
+            <h3>Learning to Localize, Grasp, and Hand Over Unmodified Surgical Needles</h3>
           </a>
           <br>
           <!-- AUTHORS -->
@@ -692,9 +749,9 @@
           <!-- IMAGES -->
           <div class="one">
             <div class="two" id='primal_under'>
-              <img src="images/primal_under.png"/>
+              <img loading="lazy" src="images/primal_under.png"/>
             </div>
-            <img src='images/primal_splash.png' id="primal_splash">
+            <img loading="lazy" src='images/primal_splash.png' id="primal_splash">
           </div>
           <!-- SCRIPT FOR HOVERING -->
           <script type="text/javascript">
@@ -707,7 +764,7 @@
         <div class="paper-content">
           <!-- TITLE -->
           <a href="https://arxiv.org/abs/1809.03531">
-            <papertitle>PRIMAL: Pathfinding via Reinforcement and Imitation Multi-Agent Learning</papertitle>
+            <h3>PRIMAL: Pathfinding via Reinforcement and Imitation Multi-Agent Learning</h3>
           </a>
           <br>
           <!-- AUTHORS -->
@@ -724,15 +781,15 @@
         </div>
       </div>
 
-    </div>
+    </section>
     
-    <div class="projects-section" id="projects">
-      <heading>Robot Systems Projects</heading>
+    <section class="projects-section" id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Robot Systems Projects</h2>
       <p><em>The result of lots of COVID boredom, I designed, built, and programmed these (mostly) from scratch</em></p>
       
       <div class="project-item">
         <div class="project-images">
-          <a href="images/segway_pic.jpeg"><img src="images/segway_pic.jpeg" alt="segway" height="210"></a>
+          <a href="images/segway_pic.jpeg"><img loading="lazy" src="images/segway_pic.jpeg" alt="Self-balancing Segway robot built from scratch during COVID, showing custom PCB and mechanical design" height="210"></a>
         </div>
         <div class="project-content">
           <a href="https://github.com/kerrj/segway">Miniature self-balancing robot</a> that follows waypoints using model-predictive control for balance and 
@@ -742,8 +799,8 @@
       
       <div class="project-item">
         <div class="project-images side-by-side">
-          <a href="images/mapper_pic.jpeg"><img src="images/mapper_pic.jpeg" alt="mapping robot" height="182"></a>
-          <a href="images/map_pic.png"><img src="images/map_pic.png" alt="map" height="182"></a>
+          <a href="images/mapper_pic.jpeg"><img loading="lazy" src="images/mapper_pic.jpeg" alt="Indoor mapping robot with planar lidar for autonomous SLAM navigation and exploration" height="182"></a>
+          <a href="images/map_pic.png"><img loading="lazy" src="images/map_pic.png" alt="Generated floor plan map from robot SLAM algorithm showing accurate room layout and furniture placement" height="182"></a>
         </div>
         <div class="project-content">
           <a href="https://github.com/kerrj/mapper">Indoor mapping robot</a> with a planar lidar that autonomously mapped my house using a 
@@ -751,14 +808,14 @@
             alongside a grid path planner for exploration and <a href="https://en.wikipedia.org/wiki/Dynamic_window_approach">DWA</a> controller for path following, all on-board a Raspberry Pi. 
         </div>
       </div>
-    </div>
+    </section>
     
-    <div class="footer">
+    <footer class="footer">
       <p>
         Source code started from <a href="https://jonbarron.info/">Jon Barron's site</a> and completely vibe-redone with Claude
       </p>
-    </div>
-  </div>
+    </footer>
+  </main>
 </body>
 
 </html>

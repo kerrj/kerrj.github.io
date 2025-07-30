@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Allow all search engines to index everything
+# Sitemap location
+Sitemap: https://kerrj.github.io/sitemap.xml
+
+# Optional: Crawl delay (uncomment if needed)
+# Crawl-delay: 1
