@@ -210,6 +210,10 @@ h1 {
   z-index: 1;
 }
 
+.profile-image-mobile {
+  display: none;
+}
+
 .profile-image img {
   width: 100%;
   height: auto;
@@ -539,6 +543,32 @@ td {
     text-align: center;
     padding: 32px 24px;
     gap: 32px;
+  }
+  
+  .profile-image {
+    display: none;
+  }
+  
+  .profile-image-mobile {
+    display: block;
+    width: 240px;
+    max-width: 100%;
+    margin: 24px auto;
+    z-index: 1;
+  }
+  
+  .profile-image-mobile img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    display: block;
+    box-shadow: var(--shadow-xl);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  }
+  
+  .profile-image-mobile:hover img {
+    transform: scale(1.02) rotate(1deg);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
   
   .paper-item,
