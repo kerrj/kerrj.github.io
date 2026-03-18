@@ -122,14 +122,6 @@
       });
     }
 
-    // Initialize animations on load
-    function initAnimations() {
-      const elements = document.querySelectorAll('.paper-item, .project-item');
-      elements.forEach((el, index) => {
-        el.classList.add('fade-in', `stagger-${Math.min(index + 1, 5)}`);
-      });
-    }
-
     // Detect touch devices and disable hover effects
     function isTouchDevice() {
       return (('ontouchstart' in window) ||
@@ -160,7 +152,6 @@
     // Initialize everything when DOM is ready
     document.addEventListener('DOMContentLoaded', function() {
       initTheme();
-      initAnimations();
       disableHoverOnTouch();
     });
   </script>
@@ -179,7 +170,9 @@
         </div>
         <p>
           I'm a 4th year PhD at Berkeley's AI Research Lab, co-advised by Angjoo Kanazawa and Ken Goldberg. My research focuses on advancing robot perception for real-world manipulation through 3D multi-modal understanding, 4D reconstruction, tactile sensing, and active vision.
-           I also maintain <a href="https://github.com/nerfstudio-project/nerfstudio">Nerfstudio</a>, a large open-source repo for 3D neural reconstruction, and my work is supported by the NSF GRFP.
+        </p>
+        <p>
+          I maintain <a href="https://github.com/nerfstudio-project/nerfstudio">Nerfstudio</a>, a large open-source framework for 3D neural reconstruction, and am supported by the NSF GRFP. I'm currently an intern at Amazon Frontier AI Lab, and previously interned at Google DeepMind on the Gemini Robotics team.
         </p>
         <p>
           Before Berkeley, I did my undergrad at CMU where I worked with Howie Choset on multi-robot path planning. I also spent time at Berkshire Grey on warehouse bin-packing automation and NASA JPL, where I was lucky to be involved in early work on a <a href="https://www.jpl.nasa.gov/missions/cadre/">moon rover tech demo</a>.
@@ -218,9 +211,7 @@
           arXiv <em>2024</em>
           <br>
           <a href="https://arxiv.org/abs/2510.15352">arXiv</a>
-          &nbsp/&nbsp
           <a href="https://escontrela.me/gauss_gym/">Website</a>
-          <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">A real-to-sim framework for training robot locomotion policies from RGB pixels in IsaacGym using Gaussian splatted scenes.</em>
         </div>
@@ -263,9 +254,7 @@
           CoRL <em>2025</em>
           <br>
           <a href="https://www.eyerobot.net/data/EyeRobot-final.pdf">arXiv</a>
-          &nbsp/&nbsp
           <a href="https://www.eyerobot.net">Website</a>
-          <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">We train a robot eyeball policy to look around to enable the performance of a BC arm agent.
           Eye gaze emerges from RL by co-training with the BC agent and rewarding the eye for correct arm predictions.</em>
@@ -294,7 +283,6 @@
           <br>
           <a href="https://arxiv.org/abs/2504.17441">arXiv</a>
           <a href="https://predict-optimize-distill.github.io/pod.github.io">Website</a>
-          <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">A self-improving framework that builds intuition for predicting 3D object configurations through iterative observation, prediction, and optimization cycles.</em>
         </div>
@@ -331,7 +319,6 @@
           ICRA <em>2025</em>
           <br>
           <a href="https://arxiv.org/abs/2503.05189">arXiv</a>
-          <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">Tracking and manipulating irregularly-shaped, previously unseen objects using a single stereo camera with Gaussian splatting for object pose estimation and language-driven manipulation.</em>
         </div>
@@ -376,7 +363,6 @@
           <br>
           <a href="https://arxiv.org/abs/2409.18121">arXiv</a>
           <a href="https://robot-see-robot-do.github.io/">Website</a>
-          <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">Object-centric visual imitation from a single video by 4D-reconstructing articulated object motion and transfering to a bimanual robot</em>
         </div>
@@ -416,7 +402,6 @@
           <!-- LINKS -->
           <br>
           <a href="https://arxiv.org/abs/2401.09419">arXiv</a> <a href="https://www.garfield.studio/">Website</a>
-          <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">Hierarchical grouping in 3D by training a scale-conditioned affinity field from multi-level masks</em>
         </div>
@@ -457,7 +442,6 @@
           <!-- LINKS -->
           <br>
           <a href="https://arxiv.org/abs/2309.07970">arXiv</a> <a href="https://lerftogo.github.io/">Website</a>
-          <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">LERF's multi-scale semantics enables 0-shot language-conditioned part grasping for a wide variety of objects.</em>
         </div>
@@ -496,7 +480,6 @@
           <a href="https://arxiv.org/abs/2302.04264">arXiv</a>
           <a href="https://nerf.studio">Website</a>
           <a href="https://github.com/nerfstudio-project/nerfstudio/">GitHub</a>
-          <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">A modular PyTorch framework for Neural Radiance Fields research with plug-and-play components and real-time visualization tools.</em>
         </div>
@@ -534,7 +517,6 @@
           <!-- LINKS -->
           <br>
           <a href="https://arxiv.org/abs/2303.09553">arXiv</a> <a href="https://lerf.io">Website</a>
-          <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">Grounding CLIP vectors volumetrically inside a NeRF allows flexible natural language queries in 3D</em>
         </div>
@@ -569,7 +551,6 @@
           <!-- LINKS -->
           <br>
           <a href="https://arxiv.org/abs/2209.13042">arXiv</a> <a href="https://sites.google.com/berkeley.edu/ssvtp">Website</a>
-          <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">We collect spatially paired vision and tactile inputs with a custom rig to train cross-modal representations. We then show these representations can be used for multiple active and passive perception tasks without fine-tuning.</em>
         </div>
@@ -610,7 +591,6 @@
           <br>
           <a href="https://sites.google.com/view/evo-nerf">Website</a>
           <a href="https://openreview.net/forum?id=Bxr45keYrf">OpenReview</a>
-          <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">NeRF functions as a real-time, updateable scene reconstruction for rapidly grasping table-top transparent objects.
           Geometry regularization speeds and improves scene geometry, and a NeRF-adapted grasping network learns to ignore floaters.</em>
@@ -655,7 +635,6 @@
           <br>
           <a href="https://sites.google.com/berkeley.edu/luv">Website</a>
           <a href="https://arxiv.org/abs/2203.04566">arXiv</a>
-          <p></p>
           <!-- SUMMARY -->
           <p><em style="opacity: 0.625">Fluorescent paint enables inexpensive (<$300) and self-supervised data collection of dense image annotations without altering objects' appearance.</em></p>
         </div>
@@ -693,7 +672,6 @@
           <br>
           <a href="https://sites.google.com/view/rss-2022-untangling/home">Website</a>
           <a href="http://www.roboticsproceedings.org/rss18/p034.pdf">Paper</a>
-          <p></p>
           <!-- SUMMARY -->
           <p><em style="opacity: 0.625">A sliding-pinching dual-mode gripper enables untangling charging cables with manipulation primitives to simplify perception coupled with learned perception modules.</em></p>
         </div>
@@ -731,7 +709,6 @@
           <br>
           <a href="https://sites.google.com/view/dex-nerf">Website</a>
           <a href="https://arxiv.org/abs/2110.14217">arXiv</a>
-          <p></p>
           <!-- SUMMARY -->
           <p><em style="opacity: 0.625">Using NeRF to reconstruct scenes with offline calibrated camera poses can produce graspable geometry even on reflective and transparent objects.</em></p>
         </div>
@@ -769,7 +746,6 @@
           <br>
           <a href="https://sites.google.com/berkeley.edu/autolab-houston">Website</a>
           <a href="https://arxiv.org/abs/2112.04071">arXiv</a>
-          <p></p>
           <!-- SUMMARY -->
           <p><em style="opacity: 0.625">Combining active perception with behavior cloning can reliably hand a surgical needle back and forth between grippers.</em></p>
         </div>
@@ -807,7 +783,6 @@
           <!-- LINKS -->
           <br>
           <a href="https://arxiv.org/abs/1809.03531">arXiv</a>
-          <p></p>
           <!-- SUMMARY -->
           <em style="opacity: 0.625">A novel framework for multi-agent pathfinding that combines reinforcement and imitation learning to teach fully decentralized policies, validated with up to 1024 agents.</em>
         </div>
