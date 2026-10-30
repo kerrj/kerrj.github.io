@@ -223,6 +223,11 @@ a:hover {
   object-fit: cover;
 }
 
+/* Placeholder for papers without media yet. */
+.thumb-empty {
+  background: var(--border);
+}
+
 .thumb-base,
 .thumb-hover {
   transition: opacity 0.25s ease;
