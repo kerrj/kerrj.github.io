@@ -165,11 +165,12 @@ def build(md_path, html_path):
     title = html.escape(conv.title, quote=False)
     page = re.sub(r'<title>.*?( - Justin Kerr)?</title>', lambda m: f'<title>{title}{m.group(1) or ""}</title>', page)
     page = re.sub(r'(<header class="blog-post-header">\s*<h1>).*?(</h1>)', lambda m: m.group(1) + title + m.group(2), page)
+    page = re.sub(r'(<meta property="og:title" content=").*?(">)', lambda m: m.group(1) + html.escape(conv.title) + m.group(2), page)
     if conv.subtitle:
         sub = conv.inline(conv.subtitle)
         plain = html.escape(re.sub(r'<[^>]+>', '', sub), quote=True)
         page = re.sub(r'(<p class="blog-subtitle">).*?(</p>)', lambda m: m.group(1) + sub + m.group(2), page)
-        page = re.sub(r'(<meta name="description" content=").*?(">)', lambda m: m.group(1) + plain + m.group(2), page)
+        page = re.sub(r'(<meta (?:name="description"|property="og:description") content=").*?(">)', lambda m: m.group(1) + plain + m.group(2), page)
 
     html_path.write_text(page)
     print(f'{md_path.relative_to(ROOT)} -> {html_path.relative_to(ROOT)}')
